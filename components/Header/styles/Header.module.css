@@ -1,0 +1,6 @@
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply bg-neutral-600 min-h-header h-header w-full fixed top-0 left-0;
+}

@@ -1,0 +1,6 @@
+@tailwind components;
+@tailwind utilities;
+
+.footer {
+  @apply bg-neutral-600 min-h-footer h-footer;
+}
