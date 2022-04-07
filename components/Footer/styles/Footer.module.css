@@ -9,7 +9,7 @@
 }
 
 .social span {
-  @apply hover:scale-[1.1] mx-4 bg-slate-300 rounded-md p-2 cursor-pointer  hover:translate-y-2 relative transition-all duration-[400ms]  overflow-hidden before:absolute before:w-[130%] before:h-[115%] before:rotate-45 before:left-[-110%] before:top-[90%] before:z-[-1] before:bg-gradient-to-r before:from-rose-600 before:to-pink-600;
+  @apply hover:scale-[1.1] mx-2 bg-slate-300 rounded-md p-2 cursor-pointer  hover:translate-y-2 relative transition-all duration-[400ms]  overflow-hidden before:absolute before:w-[130%] before:h-[115%] before:rotate-45 before:left-[-110%] before:top-[90%] before:z-[-1] before:bg-gradient-to-r before:from-rose-600 before:to-pink-600;
 }
 
 .social span:hover::before {

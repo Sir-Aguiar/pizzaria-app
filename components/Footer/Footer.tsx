@@ -1,6 +1,6 @@
 import styles from "./styles/Footer.module.css";
 import React from "react";
-import { BsFillShareFill, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsFillShareFill, BsGoogle, BsInstagram, BsLinkedin } from "react-icons/bs";
 const Footer: React.FC = () => {
   return (
     <footer className={`${styles.footer}`}>
@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           <BsInstagram />
         </span>
         <span>
-          <BsLinkedin />
+          <BsGoogle />
         </span>
         <span>
           <BsFillShareFill />
