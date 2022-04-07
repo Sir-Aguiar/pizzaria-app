@@ -2,5 +2,5 @@
 @tailwind utilities;
 
 .mainContainer {
-  @apply min-h-mainbody h-mainbody;
+  @apply min-h-mainbody h-mainbody mt-[60px];
 }

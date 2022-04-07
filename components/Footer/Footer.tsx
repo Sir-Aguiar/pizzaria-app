@@ -1,11 +1,27 @@
 import styles from "./styles/Footer.module.css";
 import React from "react";
-
-const Footer:React.FC = () => {
+import { BsFillShareFill, BsInstagram, BsLinkedin } from "react-icons/bs";
+const Footer: React.FC = () => {
   return (
     <footer className={`${styles.footer}`}>
-
+      <div className={`${styles.social}`}>
+        <span>
+          <BsInstagram />
+        </span>
+        <span>
+          <BsLinkedin />
+        </span>
+        <span>
+          <BsFillShareFill />
+        </span>
+      </div>
+      <div className={`${styles.infos}`}>
+        
+      </div>
+      <p className={`${styles.by}`}>
+        Desenvolvido por Felipe Aguiar
+      </p>
     </footer>
-  )
-}
-export default Footer
+  );
+};
+export default Footer;
