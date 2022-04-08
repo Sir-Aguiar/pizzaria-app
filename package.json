@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/react-icons": "^3.0.0",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
@@ -19,6 +18,7 @@
     "@types/node": "17.0.23",
     "@types/react": "17.0.43",
     "@types/react-dom": "17.0.14",
+    "@types/react-icons": "^3.0.0",
     "autoprefixer": "^10.4.4",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",

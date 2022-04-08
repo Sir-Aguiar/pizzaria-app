@@ -25,7 +25,7 @@ module.exports = {
         'imageShowcase': "url('/xbacon-banner.png')"
       },
       screens: {
-        'xlg': { "min": '851px' }
+        'lg':{min:'740px'},
       }
     },
   },

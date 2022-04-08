@@ -5,11 +5,11 @@
   @apply min-h-mainbody h-mainbody mt-[60px];
 }
 .mainShowCase {
-  @apply flex flex-col xlg:flex-row bg-red-700 h-[80vh] items-center justify-center;
+  @apply flex flex-col lg:flex-row bg-red-700 h-[90vh] items-center justify-center;
 }
 .imgShowCase {
-  @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat bg-center xlg:bg-[length:80%_100%] xlg:h-[100%] xlg:w-[80%];
+  @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat lg:bg-[length:90%_100%] lg:h-[100%] lg:w-[50%];
 }
 .txtShowCase {
-  @apply h-[40%]
+  @apply h-[40%] lg:h-full lg:w-[50%]
 }
