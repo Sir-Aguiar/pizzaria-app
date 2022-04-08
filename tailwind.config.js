@@ -20,6 +20,12 @@ module.exports = {
         'OSans': ["Open Sans", "sans-serif"],
         'NSans': ["Noto Sans", "sans-serif"],
         'PSans': ["Product Sans", "sans-serif"],
+      },
+      backgroundImage: {
+        'imageShowcase': "url('/xbacon-banner.png')"
+      },
+      screens: {
+        'xlg': { "min": '851px' }
       }
     },
   },
