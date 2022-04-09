@@ -38,5 +38,11 @@
   @apply w-[20px] h-[20px] fill-rose-600;
 }
 .by {
-  @apply text-slate-200 text-opacity-60 text-sm text-center 
+  @apply text-slate-200  text-opacity-60 text-sm text-center 
+}
+.infos {
+  @apply text-center text-slate-300
+}
+.infos p {
+  @apply my-1
 }

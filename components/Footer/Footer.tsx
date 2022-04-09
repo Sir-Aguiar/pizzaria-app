@@ -16,7 +16,16 @@ const Footer: React.FC = () => {
         </span>
       </div>
       <div className={`${styles.infos}`}>
-        
+        <p>DiskEntrega e Venda Online</p>
+        <p className={`${styles.funcionamento}`}>
+          Funcionamos de Terça a Domingo <br/> 18:00 às 23:30
+        </p>
+        <p>
+          Tel. de contato: (65) 9-99292-8600
+        </p>
+        <p>
+
+        </p>
       </div>
       <p className={`${styles.by}`}>
         Desenvolvido por Felipe Aguiar
