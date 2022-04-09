@@ -5,17 +5,26 @@
   @apply min-h-mainbody h-mainbody mt-[60px];
 }
 .mainShowCase {
-  @apply flex flex-col lg:flex-row min-h-[437px] bg-txtShowcase h-[90vh] items-center justify-center;
+  @apply flex flex-col lg:flex-row min-h-[450px] bg-txtShowcase h-[90vh] items-center justify-center;
 }
 .imgShowCase {
-  @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat lg:bg-[length:90%_100%] lg:h-[100%] lg:w-[50%];
+  @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat lg:bg-[length:98%_100%] lg:h-[100%] lg:w-[60%];
 }
 .txtShowCase {
-  @apply flex flex-col items-center justify-center h-[40%] lg:h-full lg:w-[50%] text-yellow-500 text-center font-PSans;
+  @apply flex flex-col items-center justify-center h-[40%] lg:h-full lg:w-[40%] text-yellow-500 text-center font-PSans ;
 }
 .txtShowCase h1 {
-  @apply my-1 font-bold text-[26px] ;
+  @apply my-1 font-bold text-[26px] lg:text-[34px] lg:mb-6;
 }
 .txtShowCase span {
-  @apply text-[34px] mt-3 font-bold p-3 bg-yellow-600 backdrop-brightness-110 shadow-md rounded-xl text-indigo-200;
+  @apply text-[32px] lg:text-[50px] mt-2 font-bold p-2 bg-yellow-600 backdrop-brightness-110 shadow-md rounded-xl text-indigo-200 -rotate-12 lg:mt-5;
+}
+.menu {
+  @apply bg-menuImage bg-contain h-[80vh] min-h-[450px] w-full
+}
+.sliderContainer {
+  @apply overflow-hidden flex w-full h-[80%] gap-2 p-1
+}
+.card {
+  @apply bg-slate-100 min-w-full
 }

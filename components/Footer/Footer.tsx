@@ -24,7 +24,6 @@ const Footer: React.FC = () => {
           Tel. de contato: (65) 9-99292-8600
         </p>
         <p>
-
         </p>
       </div>
       <p className={`${styles.by}`}>

@@ -25,7 +25,8 @@ module.exports = {
         'PSans': ["Product Sans", "sans-serif"],
       },
       backgroundImage: {
-        'imageShowcase': "url('/xbacon-banner.png')"
+        'imageShowcase': "url('/xbacon-banner.png')",
+        'menuImage':"url('/269.jpg')"
       },
       screens: {
         'lg': { min: '740px' },

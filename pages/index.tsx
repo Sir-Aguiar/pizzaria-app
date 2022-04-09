@@ -3,9 +3,11 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/HomePage.module.css";
+import * as menu from "../menu.json";
 const HomePage: NextPage = () => {
+  const [menuSection, setMenuSection] = useState<"Pizzas" | "Lanches">("Pizzas");
   return (
     <main className={`${styles.mainContainer}`}>
       <Head>
@@ -23,12 +25,24 @@ const HomePage: NextPage = () => {
         <div className={`${styles.imgShowCase}`}></div>
         <div className={`${styles.txtShowCase}`}>
           <h1>
-            Não perca esta oferta!<br/>
+            Não perca esta oferta!
+            <br />
             Peça pelo site, por apenas
           </h1>
-          <span>
-            R$ 24,90
-          </span>
+          <span>R$ 24,90</span>
+        </div>
+      </div>
+      <div className={`${styles.menu}`}>
+        <div className={`${styles.sliderContainer}`}>
+          {menu[menuSection].map((info, index) => (
+            <div key={index} className={`${styles.card}`}>
+              <h1>{info.Sabor}</h1>
+              <p>{info.Description}</p>
+            </div>
+          ))}
+        </div>
+        <div className={`${styles.sliderController}`}>
+          
         </div>
       </div>
     </main>
