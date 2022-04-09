@@ -5,17 +5,17 @@
   @apply min-h-mainbody h-mainbody mt-[60px];
 }
 .mainShowCase {
-  @apply flex flex-col lg:flex-row bg-red-700 h-[90vh] items-center justify-center;
+  @apply flex flex-col lg:flex-row bg-txtShowcase h-[90vh] items-center justify-center;
 }
 .imgShowCase {
   @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat lg:bg-[length:90%_100%] lg:h-[100%] lg:w-[50%];
 }
 .txtShowCase {
-  @apply flex flex-col items-center justify-around h-[40%] lg:h-full lg:w-[50%] text-yellow-500 text-center font-PSans;
+  @apply flex flex-col items-center h-[40%] lg:h-full lg:w-[50%] text-yellow-500 text-center font-PSans;
 }
 .txtShowCase h1 {
-  @apply  font-bold text-2xl ;
+  @apply my-1 font-bold text-[26px] ;
 }
 .txtShowCase span {
-  @apply text-3xl font-bold  p-3 bg-red-600 rounded-xl text-indigo-200;
+  @apply text-3xl mt-3 font-bold  p-3 bg-red-600 rounded-xl text-indigo-200;
 }

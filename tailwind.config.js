@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'txtShowcase': '#9c0606'
+      },
       minHeight: {
         'footer': '18rem',
         "header": "60px",
@@ -25,7 +28,7 @@ module.exports = {
         'imageShowcase': "url('/xbacon-banner.png')"
       },
       screens: {
-        'lg':{min:'740px'},
+        'lg': { min: '740px' },
       }
     },
   },
