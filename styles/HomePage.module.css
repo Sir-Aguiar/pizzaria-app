@@ -5,7 +5,7 @@
   @apply min-h-mainbody h-mainbody mt-[60px];
 }
 .mainShowCase {
-  @apply flex flex-col lg:flex-row bg-txtShowcase h-[90vh] items-center justify-center;
+  @apply flex flex-col lg:flex-row min-h-[437px] bg-txtShowcase h-[90vh] items-center justify-center;
 }
 .imgShowCase {
   @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat lg:bg-[length:90%_100%] lg:h-[100%] lg:w-[50%];
