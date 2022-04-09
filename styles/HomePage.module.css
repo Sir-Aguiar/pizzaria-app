@@ -17,5 +17,5 @@
   @apply my-1 font-bold text-[26px] ;
 }
 .txtShowCase span {
-  @apply text-[34px] mt-3 font-bold p-3 backdrop-brightness-125 shadow-md rounded-xl text-indigo-200;
+  @apply text-[34px] mt-3 font-bold p-3 bg-yellow-600 backdrop-brightness-110 shadow-md rounded-xl text-indigo-200;
 }
