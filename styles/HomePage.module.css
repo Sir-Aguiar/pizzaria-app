@@ -29,13 +29,13 @@
   @apply w-32 p-1 rounded-sm outline-none border-none;
 }
 .foods {
-  @apply h-full flex flex-col  bg-slate-200 overflow-y-auto
+  @apply h-full flex flex-col  items-center bg-slate-200 overflow-y-auto
 }
 .foods::-webkit-scrollbar-thumb {
   @apply bg-red-500
 }
 .food {
- @apply flex flex-col items-center my-1 border-2 border-slate-700 w-full h-full text-center font-OSans p-1 rounded-sm
+ @apply flex flex-col items-center my-1 border-2 border-slate-700 w-[95%] h-full text-center font-OSans p-1 rounded-sm
 }
 .food h1 {
   @apply text-xl 
