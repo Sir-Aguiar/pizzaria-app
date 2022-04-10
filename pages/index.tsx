@@ -24,7 +24,9 @@ const HomePage: NextPage = () => {
         />
         <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
       </Head>
+      <h1>Ofertas em destaque</h1>
       <div className={`${styles.mainShowCase}`}>
+
       </div>
       <div className={`${styles.menu}`}>
         <div className={`${styles.picker}`}>

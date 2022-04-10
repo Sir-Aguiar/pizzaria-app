@@ -5,9 +5,11 @@
   @apply bg-menuImage bg-contain min-h-mainbody h-mainbody mt-[60px];
 }
 .mainShowCase {
-  @apply flex flex-col lg:flex-row min-h-[320px] bg-[length:96%_56%] bg-center bg-no-repeat bg-mdimageShowcase h-[65vh] items-center justify-center xl:bg-contain xl:bg-lgimageShowcase;
+  @apply flex flex-col lg:flex-row min-h-[320px]  h-[65vh] items-center justify-center ;
 }
-
+.lancheShowCase {
+  @apply  bg-[length:96%_56%] lg:bg-[length:96%_75%]  bg-center bg-no-repeat bg-mdimageShowcase xl:bg-lgimageShowcase xl:bg-contain
+}
 .menu {
   @apply h-screen min-h-[450px] w-full;
 }
@@ -24,7 +26,7 @@
   @apply bg-red-500;
 }
 .food {
-  @apply flex flex-col justify-around items-center my-1 border-[1.5px] border-slate-700 w-[98%] lg:w-[50%] text-sm h-full text-center font-OSans p-1 rounded-md bg-slate-200;
+  @apply flex flex-col justify-around items-center my-1 border-[1.5px] border-slate-700 w-[98%] lg:w-[50%] xl:w-[40%] text-sm h-full text-center font-OSans p-1 rounded-md bg-slate-200;
 }
 .food h1 {
   @apply text-lg w-full relative after:absolute after:block after:h-[1.8px] after:w-[95%] after:left-1/2 after:-translate-x-1/2 after:bg-gradient-to-r after:from-zinc-700 after:to-zinc-600 after:-bottom-2;
