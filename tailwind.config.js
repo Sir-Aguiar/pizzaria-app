@@ -25,11 +25,13 @@ module.exports = {
         'PSans': ["Product Sans", "sans-serif"],
       },
       backgroundImage: {
-        'imageShowcase': "url('/xbacon-banner.png')",
+        'lgimageShowcase': "url('/combo-bigbanner.png')",
+        'mdimageShowcase': "url('/combo-mdbanner.png')",
         'menuImage': "url('/269.jpg')"
       },
       screens: {
-        'lg': { min: '740px' },
+        'lg': { "min": '740px', "max": "900px" },
+        'xl': { "min": '901px' }
       },
       boxShadow: {
         'price': '2px 2px 3px rgb(60,60,60,.4), -2px -1px 3px rgb(60,60,60,.4)'

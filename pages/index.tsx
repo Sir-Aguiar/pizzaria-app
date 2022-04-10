@@ -25,15 +25,6 @@ const HomePage: NextPage = () => {
         <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
       </Head>
       <div className={`${styles.mainShowCase}`}>
-        <div className={`${styles.imgShowCase}`}></div>
-        <div className={`${styles.txtShowCase}`}>
-          <h1>
-            Não perca esta oferta!
-            <br />
-            Peça pelo site, por apenas
-          </h1>
-          <span>R$ 24,90</span>
-        </div>
       </div>
       <div className={`${styles.menu}`}>
         <div className={`${styles.picker}`}>

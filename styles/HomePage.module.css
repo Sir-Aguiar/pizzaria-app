@@ -5,20 +5,9 @@
   @apply bg-menuImage bg-contain min-h-mainbody h-mainbody mt-[60px];
 }
 .mainShowCase {
-  @apply flex flex-col lg:flex-row min-h-[450px] bg-txtShowcase h-[90vh] items-center justify-center;
+  @apply flex flex-col lg:flex-row min-h-[450px] bg-[length:98%_62%] bg-center bg-no-repeat bg-mdimageShowcase h-[90vh] items-center justify-center xl:bg-contain xl:bg-lgimageShowcase;
 }
-.imgShowCase {
-  @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat lg:bg-[length:98%_100%] lg:h-[100%] lg:w-[60%];
-}
-.txtShowCase {
-  @apply flex flex-col items-center justify-center h-[40%] lg:h-full lg:w-[40%] text-yellow-500 text-center font-PSans;
-}
-.txtShowCase h1 {
-  @apply my-1 font-bold text-[26px] lg:text-[34px] lg:mb-6;
-}
-.txtShowCase span {
-  @apply text-[32px] lg:text-[50px] mt-2 font-bold p-2 bg-yellow-600 backdrop-brightness-110 shadow-md rounded-xl text-indigo-200 -rotate-12 lg:mt-5;
-}
+
 .menu {
   @apply h-screen min-h-[450px] w-full;
 }
