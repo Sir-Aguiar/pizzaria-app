@@ -5,7 +5,7 @@
   @apply bg-neutral-700 text-slate-100 min-h-header h-header w-full fixed top-0 left-0 flex items-center justify-between z-50;
 }
 .logo {
-  @apply mx-4;
+  @apply mx-4 h-full;
 }
 .navigation {
   @apply text-slate-200 mx-2;
