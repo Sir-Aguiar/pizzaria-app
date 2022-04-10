@@ -11,7 +11,7 @@
   @apply flex-1 h-full w-full rounded-sm overflow-hidden bg-imageShowcase bg-[length:101%_100%] bg-no-repeat lg:bg-[length:98%_100%] lg:h-[100%] lg:w-[60%];
 }
 .txtShowCase {
-  @apply flex flex-col items-center justify-center h-[40%] lg:h-full lg:w-[40%] text-yellow-500 text-center font-PSans ;
+  @apply flex flex-col items-center justify-center h-[40%] lg:h-full lg:w-[40%] text-yellow-500 text-center font-PSans;
 }
 .txtShowCase h1 {
   @apply my-1 font-bold text-[26px] lg:text-[34px] lg:mb-6;
@@ -20,11 +20,29 @@
   @apply text-[32px] lg:text-[50px] mt-2 font-bold p-2 bg-yellow-600 backdrop-brightness-110 shadow-md rounded-xl text-indigo-200 -rotate-12 lg:mt-5;
 }
 .menu {
-  @apply bg-menuImage bg-contain h-[80vh] min-h-[450px] w-full
+  @apply bg-menuImage bg-contain h-[80vh] min-h-[450px] w-full;
 }
-.sliderContainer {
-  @apply overflow-hidden flex w-full h-[80%] gap-2 p-1
+.picker {
+  @apply flex justify-center p-2 font-OSans;
 }
-.card {
-  @apply bg-slate-100 min-w-full
+.picker select {
+  @apply w-32 p-1 rounded-sm outline-none border-none;
+}
+.foods {
+  @apply h-full flex flex-col  bg-slate-200 overflow-y-auto
+}
+.foods::-webkit-scrollbar-thumb {
+  @apply bg-red-500
+}
+.food {
+ @apply flex flex-col items-center my-1 border-2 border-slate-700 w-full h-full text-center font-OSans p-1 rounded-sm
+}
+.food h1 {
+  @apply text-xl 
+}
+.foodPrice {
+  @apply mt-2 w-[40%] text-xl shadow-price p-1 text-yellow-600 rounded-md
+}
+.active {
+  @apply min-h-[230px]
 }

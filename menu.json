@@ -2,53 +2,66 @@
   "Pizzas": [
     {
       "Sabor": "Calabresa",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "Quatro Queijos",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "Portuguesa",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "Bacon",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "Chocolate",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "Frango Catupiry",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     }
   ],
   "Lanches": [
     {
       "Sabor": "X-Bagunça",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "Baguncinha",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
+
     },
     {
       "Sabor": "X-Bacon",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "X-Picanha",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "X-Tudo",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     },
     {
       "Sabor": "X-Frango",
-      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!"
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price":"00,00"
     }
   ]
   

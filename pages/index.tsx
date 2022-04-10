@@ -3,11 +3,14 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/HomePage.module.css";
 import * as menu from "../menu.json";
 const HomePage: NextPage = () => {
-  const [menuSection, setMenuSection] = useState<"Pizzas" | "Lanches">("Pizzas");
+  const [menuSection, setMenuSection] = useState<"Lanches" | "Pizzas">("Lanches");
+  useEffect(() => {
+    console.log(menuSection);
+  }, [menuSection]);
   return (
     <main className={`${styles.mainContainer}`}>
       <Head>
@@ -33,16 +36,27 @@ const HomePage: NextPage = () => {
         </div>
       </div>
       <div className={`${styles.menu}`}>
-        <div className={`${styles.sliderContainer}`}>
+        <div className={`${styles.picker}`}>
+          <select
+            name="foodtype"
+            id="foodtype"
+            onChange={(e) => {
+              if (e.target.value === "Pizzas") setMenuSection("Pizzas");
+              if (e.target.value === "Lanches") setMenuSection("Lanches");
+            }}
+          >
+            <option value="Lanches">Lanches</option>
+            <option value="Pizzas">Pizzas</option>
+          </select>
+        </div>
+        <div className={`${styles.foods}`}>
           {menu[menuSection].map((info, index) => (
-            <div key={index} className={`${styles.card}`}>
+            <div className={`${styles.food} ${styles.active}`} key={index}>
               <h1>{info.Sabor}</h1>
               <p>{info.Description}</p>
+              <p className={`${styles.foodPrice}`}>{info.Price}</p>
             </div>
           ))}
-        </div>
-        <div className={`${styles.sliderController}`}>
-          
         </div>
       </div>
     </main>
