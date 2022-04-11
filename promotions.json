@@ -1,0 +1,16 @@
+[
+  {
+    "name":"2XTUDO+Refri",
+    "banners":{
+      "md":"/combo-mdbanner.png",
+      "lg":"/combo-bigbanner.png"
+    }
+  },
+  {
+    "name":"2XTUDO+Refri",
+    "banners":{
+      "md":"/pizza-pepperoni-on-the-table.jpg",
+      "lg":"/mixed-ingredient-pizza-wooden-board.jpg"
+    }
+  }
+]

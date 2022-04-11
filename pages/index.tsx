@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/HomePage.module.css";
 import * as menu from "../menu.json";
+import * as promotions from "../promotions.json";
 const HomePage: NextPage = () => {
   const [menuSection, setMenuSection] = useState<"Lanches" | "Pizzas">("Lanches");
   useEffect(() => {
@@ -24,34 +25,7 @@ const HomePage: NextPage = () => {
         />
         <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
       </Head>
-      <h1>Ofertas em destaque</h1>
-      <div className={`${styles.mainShowCase}`}>
-
-      </div>
-      <div className={`${styles.menu}`}>
-        <div className={`${styles.picker}`}>
-          <select
-            name="foodtype"
-            id="foodtype"
-            onChange={(e) => {
-              if (e.target.value === "Pizzas") setMenuSection("Pizzas");
-              if (e.target.value === "Lanches") setMenuSection("Lanches");
-            }}
-          >
-            <option value="Lanches">Lanches</option>
-            <option value="Pizzas">Pizzas</option>
-          </select>
-        </div>
-        <div className={`${styles.foods}`}>
-          {menu[menuSection].map((info, index) => (
-            <div className={`${styles.food} ${styles.active}`} key={index}>
-              <h1>{info.Sabor}</h1>
-              <p>{info.Description}</p>
-              <p className={`${styles.foodPrice}`}>{info.Price}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+     
     </main>
   );
 };
