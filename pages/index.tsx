@@ -28,13 +28,15 @@ const HomePage: NextPage = () => {
       <div className={styles.promotionShowcase}>
         <h1 className={styles.promotionTitle}>Confira algumas ofertas</h1>
         <div className={styles.promotions}>
-          <div className={styles.promotion}>
-            <picture>
-              <source media="(max-width:900px)" srcSet="/combo-mdbanner.png"/>
-              <source media="(min-width:901px)" srcSet="/combo-bigbanner.png"/>
-              <img src="/combo-mdbanner.png" alt=""/>
-            </picture>
-          </div>
+          {promotions.map((promotion, index) => (
+            <div className={`${styles.promotion} ${styles.active}`} key={index}>
+              <picture>
+                <source media="(max-width:900px)" srcSet={promotion.banners.md} />
+                <source media="(min-width:901px)" srcSet={promotion.banners.lg} />
+                <img src={promotion.banners.md} alt={promotion.alt} />
+              </picture>
+            </div>
+          ))}
         </div>
       </div>
     </main>

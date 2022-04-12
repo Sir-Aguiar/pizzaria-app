@@ -4,7 +4,8 @@
     "banners":{
       "md":"/combo-mdbanner.png",
       "lg":"/combo-bigbanner.png"
-    }
+    },
+    "alt":""
   },
   {
     "name":"2XTUDO+Refri",
