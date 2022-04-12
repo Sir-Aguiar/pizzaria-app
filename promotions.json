@@ -1,28 +1,28 @@
-[
-  {
-    "name":"2XTUDO+Refri",
-    "banners":{
-      "md":"/combo-mdbanner.png",
-      "lg":"/combo-bigbanner.png"
+{
+  "promotions": [
+    {
+      "name": "2XTUDO+Refri",
+      "banners": {
+        "md": "/combo-mdbanner.png",
+        "lg": "/combo-bigbanner.png"
+      },
+      "alt": ""
     },
-    "alt":""
-  },
-  {
-    "name":"2XTUDO+Refri",
-    "banners":{
-      "md":"/pizza-pepperoni-on-the-table.jpg",
-      "lg":"/mixed-ingredient-pizza-wooden-board.jpg"
+    {
+      "name": "2XTUDO+Refri",
+      "banners": {
+        "md": "/pizza-pepperoni-on-the-table.jpg",
+        "lg": "/mixed-ingredient-pizza-wooden-board.jpg"
+      },
+      "alt": ""
     },
-    "alt":""
-
-  },
-  {
-    "name":"2XTUDO+Refri",
-    "banners":{
-      "md":"/xbacon-banner.png",
-      "lg":"/delicious-neapolitan-meat-pizza-pizzeria-delicious-food.jpg"
-    },
-    "alt":""
-
-  }
-]
+    {
+      "name": "2XTUDO+Refri",
+      "banners": {
+        "md": "/xbacon-banner.png",
+        "lg": "/delicious-neapolitan-meat-pizza-pizzeria-delicious-food.jpg"
+      },
+      "alt": ""
+    }
+  ]
+}

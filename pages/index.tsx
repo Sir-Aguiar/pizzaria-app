@@ -6,7 +6,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/HomePage.module.css";
 import * as menu from "../menu.json";
-import * as promotions from "../promotions.json";
+import { promotions } from "../promotions.json";
 const HomePage: NextPage = () => {
   const [menuSection, setMenuSection] = useState<"Lanches" | "Pizzas">("Lanches");
   useEffect(() => {
@@ -38,7 +38,6 @@ const HomePage: NextPage = () => {
             </div>
           ))}
         </div>
-        
       </div>
     </main>
   );
