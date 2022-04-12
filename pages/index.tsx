@@ -38,11 +38,7 @@ const HomePage: NextPage = () => {
             </div>
           ))}
         </div>
-        <div className={styles.controllers}>
-          {promotions.map((promo, index) => (
-            <label key={index}></label>
-          ))}
-        </div>
+        
       </div>
     </main>
   );
