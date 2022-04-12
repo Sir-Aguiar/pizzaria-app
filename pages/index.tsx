@@ -5,7 +5,6 @@ import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/HomePage.module.css";
-import * as menu from "../menu.json";
 import { promotions } from "../promotions.json";
 import Menu from "../components/Home/Menu/Menu";
 const HomePage: NextPage = () => {

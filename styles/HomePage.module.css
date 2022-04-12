@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 .mainContainer {
-  @apply flex flex-col h-[120vh] min-h-[700px] bg-slate-200 mt-[60px] overflow-hidden;
+  @apply flex flex-col h-[130vh] min-h-[700px] bg-slate-200 mt-[60px] overflow-auto;
 }
 .promotionShowcase {
   @apply h-[35vh] lg:h-[60vh] xl:h-[65vh] min-h-[300px] min-w-full flex flex-col overflow-hidden;
