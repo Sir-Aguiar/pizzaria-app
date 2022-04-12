@@ -8,7 +8,6 @@ import styles from "../styles/HomePage.module.css";
 import { promotions } from "../promotions.json";
 import Menu from "../components/Home/Menu/Menu";
 const HomePage: NextPage = () => {
-  
   return (
     <main className={`${styles.mainContainer}`}>
       <Head>
@@ -35,13 +34,8 @@ const HomePage: NextPage = () => {
             </div>
           ))}
         </div>
-        <div className={styles.controllers}>
-          {promotions.map((promo, index) => (
-            <label className={`${styles.active} ${styles.controller}`} key={index}></label>
-          ))}
-        </div>
       </div>
-      <Menu/>
+      <Menu />
     </main>
   );
 };

@@ -5,7 +5,7 @@
   @apply flex flex-col h-[110vh] min-h-[700px] bg-slate-200 mt-[60px] overflow-auto;
 }
 .promotionShowcase {
-  @apply h-[35vh] lg:h-[60vh] xl:h-[65vh] min-h-[300px] min-w-full flex flex-col overflow-hidden;
+  @apply h-[40vh] lg:h-[60vh] xl:h-[65vh] min-h-[300px] min-w-full flex flex-col overflow-hidden;
 }
 .promotionTitle {
   @apply text-2xl text-center text-yellow-500 py-2 font-semibold font-PSans;
