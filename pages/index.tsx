@@ -38,6 +38,11 @@ const HomePage: NextPage = () => {
             </div>
           ))}
         </div>
+        <div className={styles.controllers}>
+          {promotions.map((promo, index) => (
+            <label className={`${styles.active} ${styles.controller}`} key={index}></label>
+          ))}
+        </div>
       </div>
     </main>
   );
