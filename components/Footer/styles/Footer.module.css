@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 .footer {
-  @apply bg-neutral-600 min-h-footer h-footer z-10;
+  @apply bg-neutral-600 min-h-footer h-footer ;
 }
 .social {
   @apply flex flex-row  p-3 items-center justify-center;

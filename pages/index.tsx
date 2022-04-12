@@ -7,11 +7,9 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/HomePage.module.css";
 import * as menu from "../menu.json";
 import { promotions } from "../promotions.json";
+import Menu from "../components/Home/Menu/Menu";
 const HomePage: NextPage = () => {
-  const [menuSection, setMenuSection] = useState<"Lanches" | "Pizzas">("Lanches");
-  useEffect(() => {
-    console.log(menuSection);
-  }, [menuSection]);
+  
   return (
     <main className={`${styles.mainContainer}`}>
       <Head>
@@ -44,6 +42,7 @@ const HomePage: NextPage = () => {
           ))}
         </div>
       </div>
+      <Menu/>
     </main>
   );
 };

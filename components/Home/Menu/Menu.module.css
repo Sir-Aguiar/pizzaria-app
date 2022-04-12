@@ -1,0 +1,18 @@
+@tailwind components;
+@tailwind utilities;
+
+.menuShowcase {
+  @apply my-1 border-2 border-red-300 p-3 flex-1 flex flex-col justify-around;
+}
+.menuSectionPicker {
+  @apply mb-2
+}
+.menuSectionPicker h1 {
+  @apply text-center text-xl font-OSans ;
+}
+.menuSectionPicker select {
+  @apply mx-1 p-1 text-base;
+}
+.menuSection {
+  @apply flex-1 border-2 border-blue-800;
+}
