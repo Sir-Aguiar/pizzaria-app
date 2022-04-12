@@ -17,11 +17,26 @@
   @apply flex-1 border-2 border-blue-800 overflow-auto;
 }
 .food {
-  @apply w-full h-12 min-h-[48px]  border-b-2 border-black my-1 overflow-hidden transition-all duration-500 text-center;
+  @apply w-full h-12 min-h-[48px]  border-b-2 border-neutral-700 my-1 overflow-hidden transition-all duration-500 text-center flex flex-col;
 }
 .food.active {
-  @apply  h-48;
+  @apply h-72;
+}
+.apresentation svg {
+  @apply transition-all duration-[400]
+}
+.food.active .apresentation svg {
+  @apply rotate-180
 }
 .apresentation {
-  @apply flex items-center justify-between px-2 h-12;
+  @apply flex items-center justify-between px-2 h-12 min-h-[42px];
+}
+.foodCard {
+  @apply flex flex-1 flex-col justify-around;
+}
+.foodCard p {
+  @apply px-1;
+}
+.foodCard span {
+  @apply shadow-price text-lg p-2 mx-8;
 }

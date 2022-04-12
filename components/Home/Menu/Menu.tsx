@@ -42,8 +42,8 @@ const Menu: React.FC<MenuTypes> = () => {
               <fa.FaArrowDown />
             </div>
             <div className={styles.foodCard}>
-              <h1>{}</h1>
               <p>{food.Description}</p>
+              <span>{food.Price}</span>
             </div>
           </div>
         ))}
