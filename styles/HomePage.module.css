@@ -5,10 +5,10 @@
   @apply h-[170vh] min-h-[1000px] bg-slate-200 mt-[60px] overflow-hidden;
 }
 .promotionShowcase {
-  @apply h-[35vh] lg:h-[60vh] xl:max-h-[70vh] xl:h-[65vh] min-h-[300px] min-w-full flex flex-col overflow-hidden;
+  @apply h-[35vh] lg:h-[60vh] xl:h-[65vh] min-h-[300px] min-w-full flex flex-col overflow-hidden;
 }
 .promotionTitle {
-  @apply text-2xl text-center text-yellow-500 py-2 font-semibold font-PSans;
+  @apply text-2xl text-center text-yellow-500 py-2 font-semibold font-PSans ;
 }
 .promotions {
   @apply flex-1 flex ;
@@ -17,5 +17,5 @@
   @apply min-w-full h-full;
 }
 .promotion img {
-  @apply max-w-full w-full mx-auto h-full xl:h-[57vh] lg:h-[50vh];
+  @apply max-w-full w-full mx-auto h-[35vh] xl:h-[57vh] lg:h-[50vh];
 }
