@@ -25,7 +25,18 @@ const HomePage: NextPage = () => {
         />
         <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
       </Head>
-     
+      <div className={styles.promotionShowcase}>
+        <h1 className={styles.promotionTitle}>Confira algumas ofertas</h1>
+        <div className={styles.promotions}>
+          <div className={styles.promotion}>
+            <picture>
+              <source media="(max-width:900px)" srcSet="/combo-mdbanner.png"/>
+              <source media="(min-width:901px)" srcSet="/combo-bigbanner.png"/>
+              <img src="/combo-mdbanner.png" alt=""/>
+            </picture>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
