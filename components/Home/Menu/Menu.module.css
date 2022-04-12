@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 .menuShowcase {
-  @apply my-1 border-2 border-red-300 p-3 flex-1 flex flex-col justify-around;
+  @apply my-1 border-2 p-3 flex-1 flex flex-col justify-around;
 }
 .menuSectionPicker {
   @apply mb-2;
@@ -14,7 +14,7 @@
   @apply mx-1 p-1 text-base;
 }
 .menuSection {
-  @apply flex-1 border-2 border-blue-800 overflow-auto;
+  @apply flex-1 border-2  overflow-auto;
 }
 .food {
   @apply w-full h-12 min-h-[48px]  border-b-2 border-neutral-700 my-1 overflow-hidden transition-all duration-500 text-center flex flex-col;
@@ -23,10 +23,10 @@
   @apply h-72;
 }
 .apresentation svg {
-  @apply transition-all duration-[400]
+  @apply transition-all duration-[400];
 }
 .food.active .apresentation svg {
-  @apply rotate-180
+  @apply rotate-180;
 }
 .apresentation {
   @apply flex items-center justify-between px-2 h-12 min-h-[42px];
@@ -38,5 +38,5 @@
   @apply px-1;
 }
 .foodCard span {
-  @apply shadow-price text-lg p-2 mx-8;
+  @apply shadow-price text-lg p-2 mx-8 my-2 rounded-sm;
 }
