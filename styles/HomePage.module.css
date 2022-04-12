@@ -17,6 +17,6 @@
   @apply min-w-full h-full;
 }
 .promotion img {
-  @apply max-w-full w-full mx-auto h-[35vh] xl:h-[57vh] lg:h-[50vh];
+  @apply max-w-full min-h-[180px] w-full mx-auto h-[35vh] xl:h-[57vh] lg:h-[50vh];
 }
 
