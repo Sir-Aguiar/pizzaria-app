@@ -5,12 +5,12 @@ const LandingZone: React.FC = () => {
   return (
     <div className={styles.landingZone}>
       <div className={styles.iconSec}>
-        <img src="./In no time-bro.svg" alt="Mulher recebendo confirmação de sua encomenda" />
+        <img src="./Delivery-amico.svg" alt="Mulher recebendo confirmação de sua encomenda" />
       </div>
       <div className={styles.txtSec}>
         <h1>
           Agende a entrega de seu pedido
-          <br /> E acompanhe de onde tiver{" "}
+          <br /> E acompanhe de onde estiver{" "}
         </h1>
         <p>
           Aproveite nossas promoções, e monte seu pedido e acompanhe de forma virtual, quando e de onde quiser.
