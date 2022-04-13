@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 .menuShowcase {
-  @apply my-1 border-2 p-3 flex-1 flex flex-col justify-around;
+  @apply my-1 border-2 p-3 flex-1 flex flex-col justify-around items-center;
 }
 .menuSectionPicker {
   @apply mb-2;
@@ -11,11 +11,12 @@
   @apply text-center text-xl font-OSans;
 }
 .menuSectionPicker select {
-  @apply mx-1 p-1 text-base;
+  @apply mx-1 p-1 text-base bg-transparent;
 }
 .menuSection {
-  @apply flex-1 border-2  overflow-auto;
+  @apply h-full w-full lg:w-3/4 xl:w-2/5 border-2 border-amber-500 overflow-auto rounded-sm scroll-smooth;
 }
+
 .food {
   @apply w-full h-12 min-h-[48px]  border-b-2 border-neutral-700 my-1 overflow-hidden transition-all duration-500 text-center flex flex-col;
 }
@@ -35,8 +36,8 @@
   @apply flex flex-1 flex-col justify-around;
 }
 .foodCard p {
-  @apply px-1;
+  @apply px-2;
 }
 .foodCard span {
-  @apply shadow-price text-lg p-2 mx-8 my-2 rounded-sm;
+  @apply shadow-price text-lg py-2 px-16 mx-auto my-2 rounded-sm;
 }
