@@ -1,11 +1,13 @@
 @tailwind components;
 @tailwind utilities;
 .landingZone {
-  @apply h-full w-full min-h-[600px] flex flex-col lg:flex-row xl:flex-row p-1 bg-[#eccb49e3];
+  @apply h-full w-full min-h-[600px] flex flex-col lg:flex-row xl:flex-row p-1 bg-[#e2c242e3] shadow-md;
 }
-.txtSec,
 .iconSec {
-  @apply flex-1;
+  @apply w-full h-[80%]
+}
+.txtSec {
+  @apply h-full w-full
 }
 .txtSec {
   @apply text-center;
