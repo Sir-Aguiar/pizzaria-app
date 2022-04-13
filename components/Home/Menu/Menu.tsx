@@ -43,7 +43,7 @@ const Menu: React.FC<MenuTypes> = () => {
             </div>
             <div className={styles.foodCard}>
               <p>{food.Description}</p>
-              <span>{food.Price}</span>
+              <span>R$ {food.Price}</span>
             </div>
           </div>
         ))}

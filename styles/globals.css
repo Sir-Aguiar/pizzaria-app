@@ -8,5 +8,5 @@
   background-color: whitesmoke;
 }
 *::-webkit-scrollbar-thumb {
-  @apply bg-yellow-500
+  @apply bg-yellow-400
 }

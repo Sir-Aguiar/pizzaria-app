@@ -35,7 +35,7 @@
     {
       "Sabor": "X-Bagunça",
       "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
-      "Price":"00,00"
+      "Price":"11,90"
     },
     {
       "Sabor": "Baguncinha",
@@ -46,7 +46,7 @@
     {
       "Sabor": "X-Bacon",
       "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
-      "Price":"00,00"
+      "Price":"11,90"
     },
     {
       "Sabor": "X-Picanha",
@@ -56,12 +56,12 @@
     {
       "Sabor": "X-Tudo",
       "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
-      "Price":"00,00"
+      "Price":"16,90"
     },
     {
       "Sabor": "X-Frango",
       "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
-      "Price":"00,00"
+      "Price":"11,90"
     }
   ]
   
