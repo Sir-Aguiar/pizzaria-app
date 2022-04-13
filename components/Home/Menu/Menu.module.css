@@ -39,5 +39,5 @@
   @apply px-2;
 }
 .foodCard span {
-  @apply shadow-price text-lg py-2 xl:px-12 px-6 mx-auto my-2 rounded-sm bg-indigo-700 text-neutral-200 font-semibold;
+  @apply shadow-price text-lg py-2 xl:px-12 px-6 mx-auto my-2 rounded-sm bg-indigo-600 text-neutral-200 font-semibold;
 }
