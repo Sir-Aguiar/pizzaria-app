@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 .landingZone {
-  @apply h-full w-full min-h-[600px] flex flex-col lg:flex-row xl:flex-row p-1 bg-[#e2c242e3] shadow-md;
+  @apply h-full w-full min-h-[600px] flex flex-col lg:flex-row xl:flex-row p-1  shadow-md;
 }
 .iconSec {
   @apply w-full h-[80%]
