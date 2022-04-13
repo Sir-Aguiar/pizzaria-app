@@ -3,9 +3,11 @@
 .landingZone {
   @apply h-full w-full min-h-[600px] flex flex-col lg:flex-row xl:flex-row p-1 bg-[#f4d34fe3] shadow-sm;
 }
-.txtSec,
-.iconSec {
+.txtSec{
   @apply flex-1;
+}
+.iconSec img {
+  @apply max-h-[350px] min-h-[280px] mx-auto
 }
 .txtSec {
   @apply text-center;

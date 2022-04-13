@@ -1,0 +1,22 @@
+@tailwind components;
+@tailwind utilities;
+.parentPromotion {
+  @apply overflow-hidden h-full flex flex-col;
+}
+.promotionShowcase {
+  @apply w-full min-h-[300px] lg:min-h-[400px] xl:min-h-[450px] flex ;
+}
+
+.promotionShowcase img {
+  @apply max-w-full min-h-[200px] max-h-[300px] lg:max-h-[400px] xl:max-h-[450px] xl:min-h-[450px] mx-auto;
+}
+
+.promotionShowcase picture {
+  @apply min-w-full;
+}
+.controllers {
+  @apply p-1 h-8 border-2 flex items-center gap-1;
+}
+.controller {
+  @apply h-5 w-5 bg-yellow-400
+}
