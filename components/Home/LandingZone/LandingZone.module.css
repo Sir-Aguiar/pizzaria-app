@@ -1,2 +1,18 @@
 @tailwind components;
 @tailwind utilities;
+.landingZone {
+  @apply h-full w-full min-h-[600px] flex flex-col lg:flex-row xl:flex-row;
+}
+.txtSec,
+.iconSec {
+  @apply flex-1;
+}
+.txtSec {
+  @apply text-center;
+}
+.txtSec h1 {
+  @apply text-xl font-Plex;
+}
+.txtSec p {
+  @apply text-base my-2 px-1 text-[18px];
+}

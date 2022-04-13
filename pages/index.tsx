@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/HomePage.module.css";
 import { promotions } from "../promotions.json";
 import Menu from "../components/Home/Menu/Menu";
+import LandingZone from "../components/Home/LandingZone/LandingZone";
 const HomePage: NextPage = () => {
   return (
     <main className={`${styles.mainContainer}`}>
@@ -21,7 +22,7 @@ const HomePage: NextPage = () => {
         />
         <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
       </Head>
-        
+      <LandingZone/>
       <Menu />
     </main>
   );
