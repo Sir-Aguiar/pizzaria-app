@@ -14,5 +14,5 @@
   @apply text-xl font-Plex;
 }
 .txtSec p {
-  @apply text-base my-2 px-1 text-[18px];
+  @apply text-base my-2 px-1 ;
 }
