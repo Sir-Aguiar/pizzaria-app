@@ -2,13 +2,13 @@ import { NextPage } from "next";
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/Pedir.module.css";
 import { IoIosArrowForward } from "react-icons/io";
+import { setOrderStepStyle } from "../../scripts/OrderSteps";
 
 const Pedir: NextPage = () => {
-  const [orderStep, setOrderStep] = useState(0);
+  const [orderStep, setOrderStep] = useState(1);
   const [orderStatus, setOrderStatus] = useState("");
   useEffect(() => {
-    const orderProgress = document.querySelectorAll(`span.${styles.orderProgress}`)
-    // Algorítmo de estilização
+    setOrderStepStyle(orderStep);
   }, [orderStep]);
   return (
     <main className={`${styles.mainOrderContainer}`}>

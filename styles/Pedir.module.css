@@ -7,18 +7,18 @@
 .orderHeader {
   @apply min-h-[60px] h-[60px] bg-indigo-600 flex p-1 items-center justify-around;
 }
-.orderHeader span.togo {
-  @apply cursor-not-allowed;
-}
-.orderHeader span {
+.orderProgress {
   @apply text-slate-200 text-[17px];
 }
-.orderHeader span.going {
-  @apply text-yellow-400;
+.togo {
+  @apply cursor-not-allowed text-opacity-60;
 }
-.orderHeader span.done {
-  @apply text-yellow-400 cursor-pointer;
+.going {
+  @apply text-yellow-300 relative;
+}
+.done {
+  @apply text-green-400 cursor-pointer;
 }
 .orderPr {
-  @apply fill-neutral-600;
+  @apply fill-neutral-700;
 }
