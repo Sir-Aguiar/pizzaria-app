@@ -15,7 +15,7 @@ const LandingZone: React.FC = () => {
         <p>
           Aproveite nossas promoções, e monte seu pedido e acompanhe de forma virtual, quando e de onde quiser. Solicite
           sua refeição de forma virtual, espere seu pedido e pague de forma presencial.
-          <br />
+
           Trabalhamos para que seu único esforço seja aproveitar uma maravilhosa refeição!
         </p>
       </div>
