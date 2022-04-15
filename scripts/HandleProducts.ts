@@ -1,15 +1,13 @@
 import axios from "axios";
 
-const ProductsAPI = axios.create({
-  baseURL: "https://fakestoreapi.com/products",
-});
-
 const HandleProducts = async () => {
-  const apiResponse = await ProductsAPI.get("?limit=20");
+  const apiResponse = await axios.get(
+    "https://api.unsplash.com/search/photos?query=food&client_id=pXBu5L9GAiulxDNq25uHn67BMPYwYiyzQ43cjxFMg5k"
+  );
   return {
     status: apiResponse.status,
     data: apiResponse.data,
   };
 };
 
-export { HandleProducts, ProductsAPI };
+export { HandleProducts };

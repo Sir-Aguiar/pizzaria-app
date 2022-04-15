@@ -1,17 +1,28 @@
 import { NextPage } from "next";
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/Pedir.module.css";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoIosInformationCircleOutline } from "react-icons/io";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import { setOrderStepStyle } from "../../scripts/OrderSteps";
 import { HandleProducts } from "../../scripts/HandleProducts";
-import { foodTypes, HandleFoodTypes } from "../../scripts/FoodPicker";
+import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../scripts/FoodPicker";
+import * as foodMenu from "../../menu.json";
 const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
   const [orderStatus, setOrderStatus] = useState("");
-  const [foodType, setFoodType] = useState("");
+  const [foodType, setFoodType] = useState<PossibleFoods>("Lanches");
+
   useEffect(() => {
     setOrderStepStyle(orderStep);
     HandleFoodTypes(foodType, setFoodType);
+    HandleProducts().then((res) => {
+      res.data.results.forEach((item: any) => {
+        console.log({
+          regular: item.urls.regular,
+          small: item.urls.small,
+        });
+      });
+    });
   }, [orderStep, foodType]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
@@ -35,6 +46,22 @@ const Pedir: NextPage = () => {
             >
               {type}
             </span>
+          ))}
+        </div>
+        <div className={styles.avaibleMenu}>
+          {foodMenu[foodType].map((food, index) => (
+            <div className={`${styles.foodCard}`} key={index}>
+              <div className={styles.infoSide}>
+                <p>{food.Sabor}</p>
+                <AiOutlineInfoCircle color="#6366f1" />
+                00,00
+              </div>
+              <div className={styles.picSide}>
+                <picture>
+                  <img src={food.Image.regular} />
+                </picture>
+              </div>
+            </div>
           ))}
         </div>
       </div>

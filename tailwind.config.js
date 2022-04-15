@@ -34,7 +34,7 @@ module.exports = {
         'xl': { "min": '901px' }
       },
       boxShadow: {
-        'price': '2px 2px 3px rgb(60,60,60,.4), -2px -1px 3px rgb(60,60,60,.4)'
+        'price': '2px 2px 3px rgb(60,60,60,.4), -2px -1px 3px rgb(60,60,60,.4)',
       }
     },
   },
