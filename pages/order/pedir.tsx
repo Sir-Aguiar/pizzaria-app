@@ -4,16 +4,15 @@ import styles from "../../styles/Pedir.module.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { setOrderStepStyle } from "../../scripts/OrderSteps";
 import { HandleProducts } from "../../scripts/HandleProducts";
-
+import { foodTypes, HandleFoodTypes } from "../../scripts/FoodPicker";
 const Pedir: NextPage = () => {
-  const [orderStep, setOrderStep] = useState(1);
+  const [orderStep, setOrderStep] = useState(0);
   const [orderStatus, setOrderStatus] = useState("");
+  const [foodType, setFoodType] = useState("");
   useEffect(() => {
     setOrderStepStyle(orderStep);
-    HandleProducts().then((res) => {
-      console.log(res.data)
-    })
-  }, [orderStep]);
+    HandleFoodTypes(foodType, setFoodType);
+  }, [orderStep, foodType]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
       <header className={styles.orderHeader}>
@@ -23,6 +22,22 @@ const Pedir: NextPage = () => {
         <IoIosArrowForward className={styles.orderPr} />
         <span className={`${styles.orderProgress}`}>Finalizar</span>
       </header>
+      <div className={`${styles.foodContainer}`}>
+        <div className={`${styles.foodPicker}`}>
+          {foodTypes.map((type, index) => (
+            <span
+              key={index}
+              className={`${styles.foodType}`}
+              onClick={() => {
+                setFoodType(type);
+              }}
+              id={type}
+            >
+              {type}
+            </span>
+          ))}
+        </div>
+      </div>
     </main>
   );
 };

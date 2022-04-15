@@ -14,11 +14,23 @@
   @apply cursor-not-allowed text-opacity-60;
 }
 .going {
-  @apply text-yellow-300 relative;
+  @apply text-[#ffcb74] relative;
 }
 .done {
-  @apply text-green-400 cursor-pointer;
+  @apply text-green-400 cursor-not-allowed;
 }
 .orderPr {
   @apply fill-neutral-700;
+}
+.foodContainer {
+  @apply w-full h-[calc(100%-60px)]  p-1;
+}
+.foodPicker {
+  @apply flex items-center justify-around text-lg font-semibold;
+}
+.foodType {
+  @apply transition-all 
+}
+.foodType.active {
+  @apply relative after:block after:absolute after:h-2 after:w-2 after:rounded-full after:bg-rose-600 after:-bottom-3 after:left-1/2 after:-translate-x-1/2 text-rose-600;
 }
