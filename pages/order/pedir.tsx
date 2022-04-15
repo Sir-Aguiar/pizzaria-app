@@ -54,7 +54,7 @@ const Pedir: NextPage = () => {
               <div className={styles.infoSide}>
                 <p>{food.Sabor}</p>
                 <AiOutlineInfoCircle color="#6366f1" />
-                00,00
+                R$ {food.Price}
               </div>
               <div className={styles.picSide}>
                 <picture>

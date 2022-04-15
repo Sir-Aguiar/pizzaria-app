@@ -53,6 +53,15 @@
         "regular":"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMTk5MTF8MHwxfHNlYXJjaHwyfHxmb29kfGVufDB8fHx8MTY1MDA1NzY4OA&ixlib=rb-1.2.1&q=80&w=400",
         "small":"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMTk5MTF8MHwxfHNlYXJjaHwyfHxmb29kfGVufDB8fHx8MTY1MDA1NzY4OA&ixlib=rb-1.2.1&q=80&w=200"
       }
+    },
+    {
+      "Sabor": "Beijinho",
+      "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse rem provident aperiam animi delectus natus atque, pariatur quos minus. Cumque velit neque provident. Eum, officiis magnam illo modi dolor incidunt!",
+      "Price": "00,00",
+      "Image":{
+        "regular":"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMTk5MTF8MHwxfHNlYXJjaHwyfHxmb29kfGVufDB8fHx8MTY1MDA1NzY4OA&ixlib=rb-1.2.1&q=80&w=400",
+        "small":"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMTk5MTF8MHwxfHNlYXJjaHwyfHxmb29kfGVufDB8fHx8MTY1MDA1NzY4OA&ixlib=rb-1.2.1&q=80&w=200"
+      }
     }
   ],
   "Lanches": [

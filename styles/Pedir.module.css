@@ -5,10 +5,10 @@
   @apply mt-[60px] w-full h-screen min-h-[600px];
 }
 .orderHeader {
-  @apply min-h-[60px] h-[60px] bg-indigo-600 flex p-1 items-center justify-around;
+  @apply min-h-[60px]  h-[60px] bg-indigo-600 flex p-1 items-center justify-around;
 }
 .orderProgress {
-  @apply text-slate-200 text-[17px];
+  @apply text-slate-200 text-[17px] ;
 }
 .togo {
   @apply cursor-not-allowed text-opacity-60;
@@ -23,10 +23,10 @@
   @apply fill-neutral-700;
 }
 .foodContainer {
-  @apply w-full h-[calc(100%-60px)]  p-1;
+  @apply w-full h-[calc(100%-60px)] flex flex-col items-center p-1;
 }
 .foodPicker {
-  @apply flex items-center justify-around text-lg font-semibold mb-4;
+  @apply w-full flex items-center justify-around text-lg font-semibold mb-4;
 }
 .foodType {
   @apply transition-all;
@@ -35,7 +35,7 @@
   @apply relative after:block after:absolute after:h-2 after:w-2 after:rounded-full after:bg-rose-500 after:-bottom-3 after:left-1/2 after:-translate-x-1/2 text-rose-500;
 }
 .avaibleMenu {
-  @apply h-[calc(100%-60px)] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
+  @apply h-[calc(100%-60px)] max-w-[700px] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
 }
 .foodCard {
   @apply flex min-h-[85px] h-[85px] max-h-[85px] shadow-price my-[6px];
@@ -49,6 +49,4 @@
 .picSide {
   @apply flex-1 flex items-center justify-center overflow-hidden;
 }
-.picside img {
-  @apply w-full h-full;
-}
+
