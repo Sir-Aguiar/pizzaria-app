@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     <header className={`${styles.header}`}>
       <img src="/logo.png" alt="Logo da pizzaria" className={`${styles.logo}`} />
       <nav className={`${styles.navigation}`}>
-        <Link href="/pedir" passHref>
+        <Link href="/order/pedir" passHref>
           <button className={`${styles.order}`}>
             Pedir <MD.MdDeliveryDining size={20} />
           </button>

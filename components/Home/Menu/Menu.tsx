@@ -8,9 +8,6 @@ type FoodType = "Lanches" | "Pizzas";
 type MenuTypes = {};
 const Menu: React.FC<MenuTypes> = () => {
   const [menuSection, setMenuSection] = useState<"Lanches" | "Pizzas">("Lanches");
-  useEffect(() => {
-    console.log(menuSection);
-  }, [menuSection]);
   return (
     <div className={`${styles.menuShowcase}`}>
       <div className={styles.menuSectionPicker}>
