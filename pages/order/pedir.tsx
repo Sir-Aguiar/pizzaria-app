@@ -7,6 +7,7 @@ import { setOrderStepStyle } from "../../scripts/OrderSteps";
 import { HandleProducts } from "../../scripts/HandleProducts";
 import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../scripts/FoodPicker";
 import * as foodMenu from "../../menu.json";
+import { FoodCard } from "../../components/Pedir/FoodCard/FoodCard";
 const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
   const [orderStatus, setOrderStatus] = useState("");
@@ -50,18 +51,7 @@ const Pedir: NextPage = () => {
         </div>
         <div className={styles.avaibleMenu}>
           {foodMenu[foodType].map((food, index) => (
-            <div className={`${styles.foodCard}`} key={index}>
-              <div className={styles.infoSide}>
-                <p>{food.Sabor}</p>
-                <AiOutlineInfoCircle color="#6366f1" />
-                <p className={styles.price}>R$ {food.Price}</p>
-              </div>
-              <div className={styles.picSide}>
-                <picture>
-                  <img src={food.Image.regular} />
-                </picture>
-              </div>
-            </div>
+            <FoodCard key={index} food={food} />
           ))}
         </div>
       </div>

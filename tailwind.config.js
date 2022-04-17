@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'txtShowcase': '#9c0606'
+        'txtShowcase': '#9c0606',
+        "infoButton":"#6366f1"
       },
       minHeight: {
         'footer': '18rem',

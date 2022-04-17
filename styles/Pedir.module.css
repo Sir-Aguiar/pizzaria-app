@@ -26,7 +26,7 @@
   @apply w-full h-[calc(100%-60px)] flex flex-col items-center p-1;
 }
 .foodPicker {
-  @apply w-full flex items-center justify-around text-lg font-semibold mb-4;
+  @apply cursor-pointer w-full flex items-center justify-around text-lg font-semibold mb-4;
 }
 .foodType {
   @apply transition-all;
@@ -37,19 +37,3 @@
 .avaibleMenu {
   @apply h-[calc(100%-60px)] max-w-[700px] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
 }
-.foodCard {
-  @apply flex min-h-[85px] h-[85px] max-h-[85px] shadow-price my-[6px];
-}
-.infoSide {
-  @apply flex-1 flex flex-col items-center justify-evenly ;
-}
-.infoSide p {
-  @apply text-base
-}
-.infoSide .price {
-  @apply text-[19px] text-rose-400 font-bold
-}
-.picSide {
-  @apply flex-1 flex items-center justify-center overflow-hidden;
-}
-
