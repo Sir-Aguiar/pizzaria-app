@@ -10,7 +10,7 @@
   @apply text-base;
 }
 .infoSide .price {
-  @apply text-[19px] text-rose-400 font-bold;
+  @apply text-[19px] text-rose-500 font-bold;
 }
 .picSide {
   @apply flex-1 flex items-center justify-center overflow-hidden;

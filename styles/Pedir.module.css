@@ -38,5 +38,5 @@
   @apply h-[calc(90%-60px)] max-w-[700px] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
 }
 .nextStep button {
-  @apply bg-green-400 p-2 px-3 text-lg mt-3 rounded-md flex items-center
+  @apply bg-green-400 p-2 px-3 text-lg mt-3 rounded-md flex items-center hover:brightness-110
 }
