@@ -16,6 +16,9 @@
   animation: fadein 0.5s;
   animation-fill-mode: forwards;
 }
+.tip {
+  @apply text-sm text-center my-2;
+}
 @keyframes fadein {
   from {
     opacity: 0;
