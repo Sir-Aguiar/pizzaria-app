@@ -54,6 +54,9 @@ const Pedir: NextPage = () => {
             <FoodCard key={index} food={food} />
           ))}
         </div>
+        <div className={styles.nextStep}>
+          <button>Prosseguir</button>
+        </div>
       </div>
     </main>
   );
