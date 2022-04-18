@@ -55,7 +55,13 @@ const Pedir: NextPage = () => {
           ))}
         </div>
         <div className={styles.nextStep}>
-          <button>Prosseguir</button>
+          <button
+            onClick={() => {
+              setOrderStep(1);
+            }}
+          >
+            Prosseguir <IoIosArrowForward size={21} />
+          </button>
         </div>
       </div>
     </main>
