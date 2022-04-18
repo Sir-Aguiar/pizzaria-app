@@ -19,6 +19,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, food }) => {
       <div className={`${styles.modal}`}>
         <p className={styles.tip}>Clique na foto para adicionar ao carrinho</p>
         <AiFillCloseCircle className={styles.closeIcon}/>
+        
       </div>
     </div>
   );

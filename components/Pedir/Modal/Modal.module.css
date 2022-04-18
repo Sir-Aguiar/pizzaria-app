@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 .backdrop {
-  @apply flex items-center justify-center absolute bg-neutral-700 bg-opacity-40 mt-[60px] top-0 left-0 h-full w-full;
+  @apply flex items-center justify-center absolute bg-neutral-700 bg-opacity-40 mt-[120px] top-0 left-0 h-full w-full;
 }
 .modal {
   @apply h-64 w-[95%] bg-gradient-to-r from-[#f7cb6b] to-[#fba980] rounded-md shadow-md opacity-0 relative;
