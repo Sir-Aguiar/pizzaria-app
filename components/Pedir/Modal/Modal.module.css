@@ -19,6 +19,9 @@
 .tip {
   @apply text-sm text-center my-2;
 }
+.foodDes {
+  @apply text-center text-[17px] font-OSans p-1 mt-5 text-neutral-800;
+}
 @keyframes fadein {
   from {
     opacity: 0;

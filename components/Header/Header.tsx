@@ -6,7 +6,9 @@ import Link from "next/link";
 const Header: React.FC = () => {
   return (
     <header className={`${styles.header}`}>
-      <img src="/logo.png" alt="Logo da pizzaria" className={`${styles.logo}`} />
+      <Link href="/" passHref>
+        <img src="/logo.png" alt="Logo da pizzaria" className={`${styles.logo}`} />
+      </Link>
       <nav className={`${styles.navigation}`}>
         <Link href="/order/pedir" passHref>
           <button className={`${styles.order}`}>
