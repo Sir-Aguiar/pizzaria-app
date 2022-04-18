@@ -25,6 +25,7 @@ const HomePage: NextPage = () => {
       </Head>
       <LandingZone />
       <Menu />
+      
     </main>
   );
 };
