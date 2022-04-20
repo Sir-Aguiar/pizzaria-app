@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 .foodCard {
-  @apply flex min-h-[85px] h-[85px] max-h-[85px] shadow-price my-[6px];
+  @apply flex min-h-[85px] min-w-full h-[85px] max-h-[85px] shadow-price my-[6px];
 }
 .infoSide {
   @apply flex-1 flex flex-col items-center justify-evenly;
@@ -17,4 +17,7 @@
 }
 .infoButton {
   @apply fill-infoButton cursor-pointer;
+}
+.picSide img {
+  @apply min-w-full
 }

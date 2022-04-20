@@ -4,31 +4,22 @@ import styles from "./FoodCard.module.css";
 import { PossibleFoods } from "../../../scripts/FoodPicker";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import Modal from "../Modal/Modal";
-interface MenuItem {
-  Sabor: string;
-  Description: string;
-  Price: string;
-  Image: {
-    regular: string;
-    small: string;
-  };
-}
+import { ProductsResponse } from "../../../scripts/GetterMenu";
+
 type FoodCardProps = {
-  food: MenuItem;
+  food: ProductsResponse;
 };
 const FoodCard: React.FC<FoodCardProps> = ({ food }) => {
   const [modalOpen, setModalOpen] = useState(false)
   return (
     <div className={`${styles.foodCard}`}>
       <div className={styles.infoSide}>
-        <p>{food.Sabor}</p>
+        <p>{food.name}</p>
         <AiOutlineInfoCircle className={styles.infoButton} onClick={()=>{setModalOpen(true)}}/>
-        <p className={styles.price}>R$ {food.Price}</p>
+        <p className={styles.price}>R$ {food.price}</p>
       </div>
-      <div className={styles.picSide}>
-        <picture>
-          <img src={food.Image.regular} alt=""/>
-        </picture>
+      <div className={styles.picSide} style={{backgroundImage:`url(${food.images.small})`, backgroundPosition:"right",backgroundSize:"80% 95%",backgroundRepeat:"no-repeat"}}>
+        
       </div>
       {
         modalOpen && <Modal onClose={setModalOpen} food={food}/>
@@ -36,5 +27,4 @@ const FoodCard: React.FC<FoodCardProps> = ({ food }) => {
     </div>
   );
 };
-export type { MenuItem };
 export { FoodCard };

@@ -6,15 +6,15 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { setOrderStepStyle } from "../../scripts/OrderSteps";
 import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../scripts/FoodPicker";
 import { FoodCard } from "../../components/Pedir/FoodCard/FoodCard";
-import { handleProducts } from "../../scripts/GetterMenu";
+import { handleProducts, ProductsResponse } from "../../scripts/GetterMenu";
 const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
   const [foodType, setFoodType] = useState<PossibleFoods>("Lanches");
-  const [foodMenu, setFoodMenu] = useState([])
+  const [foodMenu, setFoodMenu] = useState<ProductsResponse[]>([]);
   useEffect(() => {
     setOrderStepStyle(orderStep);
     HandleFoodTypes(foodType, setFoodType);
-    handleProducts().then(res => console.log(res))
+    handleProducts().then((res) => setFoodMenu(res));
   }, [orderStep, foodType]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
