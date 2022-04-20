@@ -4,26 +4,17 @@ import styles from "../../styles/Pedir.module.css";
 import { IoIosArrowForward, IoIosInformationCircleOutline } from "react-icons/io";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { setOrderStepStyle } from "../../scripts/OrderSteps";
-import { HandleProducts } from "../../scripts/HandleProducts";
 import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../scripts/FoodPicker";
-import * as foodMenu from "../../menu.json";
 import { FoodCard } from "../../components/Pedir/FoodCard/FoodCard";
+import { handleProducts } from "../../scripts/GetterMenu";
 const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
-  const [orderStatus, setOrderStatus] = useState("");
   const [foodType, setFoodType] = useState<PossibleFoods>("Lanches");
-
+  const [foodMenu, setFoodMenu] = useState([])
   useEffect(() => {
     setOrderStepStyle(orderStep);
     HandleFoodTypes(foodType, setFoodType);
-    HandleProducts().then((res) => {
-      res.data.results.forEach((item: any) => {
-        console.log({
-          regular: item.urls.regular,
-          small: item.urls.small,
-        });
-      });
-    });
+    handleProducts().then(res => console.log(res))
   }, [orderStep, foodType]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
@@ -50,7 +41,7 @@ const Pedir: NextPage = () => {
           ))}
         </div>
         <div className={styles.avaibleMenu}>
-          {foodMenu[foodType].map((food, index) => (
+          {foodMenu.map((food, index) => (
             <FoodCard key={index} food={food} />
           ))}
         </div>
