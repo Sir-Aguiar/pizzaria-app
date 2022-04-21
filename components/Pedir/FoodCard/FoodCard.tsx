@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import styles from "./FoodCard.module.css";
-import { PossibleFoods } from "../../../scripts/FoodPicker";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import Modal from "../Modal/Modal";
 import { ProductsResponse } from "../../../scripts/GetterMenu";
