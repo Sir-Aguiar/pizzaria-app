@@ -11,6 +11,7 @@ const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
   const [foodType, setFoodType] = useState<PossibleFoods>("Lanches");
   const [foodMenu, setFoodMenu] = useState<ProductsResponse[]>([]);
+  const [myCart, setCart] = useState([]);
   useEffect(() => {
     setOrderStepStyle(orderStep);
     HandleFoodTypes(foodType, setFoodType);
@@ -42,7 +43,7 @@ const Pedir: NextPage = () => {
         </div>
         <div className={styles.avaibleMenu}>
           {foodMenu.map((food, index) => (
-            <FoodCard key={index} food={food} />
+            <FoodCard key={index} food={food} addToCart={setCart} />
           ))}
         </div>
         <div className={styles.nextStep}>

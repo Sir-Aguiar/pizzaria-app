@@ -8,9 +8,9 @@ import { PicSide } from "./picSide";
 
 type FoodCardProps = {
   food: ProductsResponse;
+  addToCart: React.Dispatch<React.SetStateAction<never[]>>;
 };
-const FoodCard: React.FC<FoodCardProps> = ({ food }) => {
-  
+const FoodCard: React.FC<FoodCardProps> = ({ food, addToCart }) => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className={`${styles.foodCard}`}>
@@ -24,7 +24,7 @@ const FoodCard: React.FC<FoodCardProps> = ({ food }) => {
         />
         <p className={styles.price}>R$ {food.price}</p>
       </div>
-      <PicSide imageLink={food.images.medium}/>
+      <PicSide imageLink={food.images.medium} />
       {modalOpen && <Modal onClose={setModalOpen} food={food} />}
     </div>
   );
