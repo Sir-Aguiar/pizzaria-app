@@ -9,6 +9,7 @@ import { promotions } from "../promotions.json";
 import Menu from "../components/Home/Menu/Menu";
 import LandingZone from "../components/Home/LandingZone/LandingZone";
 import Promotions from "../components/Home/Promotions/Promotions";
+import OrderTutorial from "../components/Home/OrderTutorial/OrderTutorial";
 const HomePage: NextPage = () => {
   return (
     <main className={`${styles.mainContainer}`}>
@@ -24,6 +25,7 @@ const HomePage: NextPage = () => {
         <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
       </Head>
       <LandingZone />
+      <OrderTutorial/>
       <Menu />
       
     </main>
