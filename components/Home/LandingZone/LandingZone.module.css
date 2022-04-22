@@ -5,7 +5,7 @@
   w-full 
   flex flex-col lg:flex-row xl:flex-row 
   p-1 
-  bg-lighterYellow shadow-sm;
+  bg-[#dfbf3ce3] shadow-sm;
 }
 .txtSec {
   @apply flex-1 lg:flex lg:flex-col xl:flex xl:flex-col  xl:justify-center lg:justify-center text-center lg:text-left xl:text-left;
