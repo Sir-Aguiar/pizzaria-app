@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       colors: {
         'txtShowcase': '#9c0606',
-        "infoButton":"#6366f1"
+        "infoButton":"#6366f1",
+        "lighterYellow":"#f7cb6b",
+        "darkerYellow":"#fba980"
       },
       minHeight: {
         'footer': '18rem',

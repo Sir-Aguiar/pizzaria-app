@@ -5,7 +5,7 @@
   @apply flex items-center justify-center absolute bg-neutral-700 bg-opacity-40 mt-[120px] top-0 left-0 h-full w-full;
 }
 .modal {
-  @apply h-64 w-[95%] lg:w-[70%] xl:w-[50%] bg-gradient-to-r from-[#f7cb6b] to-[#fba980] rounded-md shadow-md opacity-0 relative;
+  @apply h-64 w-[95%] max-w-[500px] bg-gradient-to-r from-lighterYellow to-darkerYellow rounded-md shadow-md opacity-0 relative;
 }
 .closeIcon {
   @apply absolute top-1 right-2 cursor-pointer fill-slate-100;
