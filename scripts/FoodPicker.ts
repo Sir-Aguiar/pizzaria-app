@@ -1,6 +1,6 @@
 import styles from "../styles/Pedir.module.css";
-type PossibleFoods = "Lanches" | "Pizzas" | "Bebidas";
-const foodTypes:PossibleFoods[] = ["Lanches", "Pizzas", "Bebidas"];
+type PossibleFoods = "Lanches" | "Pizzas" | "Bebidas"|"Ofertas";
+const foodTypes:PossibleFoods[] = ["Lanches", "Pizzas", "Bebidas","Ofertas"];
 let inicializer = 0;
 const HandleFoodTypes = (foodType: PossibleFoods, setFoodType: React.Dispatch<React.SetStateAction<PossibleFoods>>) => {
   const foodTypeSpans = document.querySelectorAll(`span.${styles.foodType}`);

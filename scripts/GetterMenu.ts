@@ -1,4 +1,5 @@
 import axios from "axios";
+import { PossibleFoods } from "./FoodPicker";
 interface ProductsResponse {
   name: string;
   description: string;
@@ -10,12 +11,15 @@ interface ProductsResponse {
   _id: number;
 }
 interface Produtos {
-  Produtos: ProductsResponse[];
+  Lanches: ProductsResponse[];
+  Pizzas: ProductsResponse[];
+  Bebidas: ProductsResponse[];
+  Ofertas:ProductsResponse[];
 }
-const handleProducts = async () => {
+const handleProducts = async (product:PossibleFoods) => {
   const products = await axios.get<Produtos>("https://pizzariabackend.herokuapp.com/get-products/TestePizzariaMenu");
 
-  return products.data.Produtos;
+  return products.data[product];
 };
 export type { ProductsResponse };
 export { handleProducts };

@@ -15,7 +15,9 @@ const Pedir: NextPage = () => {
   useEffect(() => {
     setOrderStepStyle(orderStep);
     HandleFoodTypes(foodType, setFoodType);
-    handleProducts().then((res) => setFoodMenu(res));
+    handleProducts(foodType).then((res) => {
+      setFoodMenu(res);
+    });
   }, [orderStep, foodType]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
