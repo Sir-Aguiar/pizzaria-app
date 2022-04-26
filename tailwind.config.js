@@ -9,7 +9,7 @@ module.exports = {
         'txtShowcase': '#9c0606',
         "infoButton":"#6366f1",
         "lighterYellow":"#f7cb6b",
-        "darkerYellow":"#fba980"
+        "darkerYellow":"#fba990"
       },
       minHeight: {
         'footer': '18rem',
