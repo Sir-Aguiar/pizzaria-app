@@ -22,21 +22,7 @@
 .orderPr {
   @apply fill-neutral-700;
 }
-.foodContainer {
-  @apply w-full h-[calc(100%-60px)] flex flex-col items-center p-1;
-}
-.foodPicker {
-  @apply cursor-pointer w-full flex items-center justify-around text-lg font-semibold mb-4;
-}
-.foodType {
-  @apply transition-all;
-}
-.foodType.active {
-  @apply relative after:block after:absolute after:h-2 after:w-2 after:rounded-full after:bg-rose-500 after:-bottom-3 after:left-1/2 after:-translate-x-1/2 text-rose-500;
-}
-.avaibleMenu {
-  @apply h-[calc(90%-60px)] w-full max-w-[500px] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
-}
+
 .nextStep button {
   @apply bg-green-400 p-2 px-3 text-lg mt-3 rounded-md flex items-center hover:brightness-110
 }
