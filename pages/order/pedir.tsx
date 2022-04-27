@@ -7,18 +7,19 @@ import { setOrderStepStyle } from "../../scripts/OrderSteps";
 import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../scripts/FoodPicker";
 import { FoodCard } from "../../components/Pedir/FoodCard/FoodCard";
 import { handleProducts, ProductsResponse } from "../../scripts/GetterMenu";
+
 const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
   const [foodType, setFoodType] = useState<PossibleFoods>("Lanches");
   const [foodMenu, setFoodMenu] = useState<ProductsResponse[]>([]);
-  const [myCart, setCart] = useState([]);
+  const [myCart, setCart] = useState<ProductsResponse[]>([]);
   useEffect(() => {
     setOrderStepStyle(orderStep);
     HandleFoodTypes(foodType, setFoodType);
     handleProducts(foodType).then((res) => {
       setFoodMenu(res);
     });
-  }, [orderStep, foodType]);
+  }, [orderStep, foodTypes]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
       <header className={styles.orderHeader}>
@@ -45,7 +46,7 @@ const Pedir: NextPage = () => {
         </div>
         <div className={styles.avaibleMenu}>
           {foodMenu.map((food, index) => (
-            <FoodCard key={index} food={food} addToCart={setCart} />
+            <FoodCard key={index} food={food} addToCart={setCart} cart={myCart} />
           ))}
         </div>
         <div className={styles.nextStep}>
