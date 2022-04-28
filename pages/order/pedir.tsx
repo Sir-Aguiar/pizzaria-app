@@ -8,13 +8,13 @@ import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../scripts/FoodPic
 import { FoodCard } from "../../components/Pedir/FoodCard/FoodCard";
 import { handleProducts, ProductsResponse } from "../../scripts/GetterMenu";
 import FirstStep from "../../components/Pedir/Step_0/Step0";
+import SecondStep from "../../components/Pedir/Step_1/Step1";
 
 const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
   const [myCart, setCart] = useState<ProductsResponse[]>([]);
   useEffect(() => {
     setOrderStepStyle(orderStep);
-    
   }, [orderStep, foodTypes]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
@@ -25,10 +25,9 @@ const Pedir: NextPage = () => {
         <IoIosArrowForward className={styles.orderPr} />
         <span className={`${styles.orderProgress}`}>Finalizar</span>
       </header>
-      {
-        orderStep === 0 && <FirstStep myCart={myCart} setCart={setCart} />
-      }
-
+      {orderStep === 0 && <FirstStep myCart={myCart} setCart={setCart} />}
+      {orderStep === 1 && <SecondStep />}
+      
       <div className={styles.nextStep}>
         <button
           onClick={() => {
