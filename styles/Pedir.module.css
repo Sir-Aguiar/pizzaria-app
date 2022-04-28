@@ -2,13 +2,13 @@
 @tailwind utilities;
 
 .mainOrderContainer {
-  @apply mt-[60px] w-full h-screen min-h-[600px];
+  @apply mt-[60px] w-full h-screen min-h-[670px] flex flex-col overflow-hidden;
 }
 .orderHeader {
   @apply min-h-[60px]  h-[60px] bg-indigo-600 flex p-1 items-center justify-around;
 }
 .orderProgress {
-  @apply text-slate-200 text-[17px] ;
+  @apply text-slate-200 text-[17px];
 }
 .togo {
   @apply cursor-not-allowed text-opacity-60;
@@ -22,7 +22,9 @@
 .orderPr {
   @apply fill-neutral-700;
 }
-
+.nextStep {
+  @apply flex-1 my-2
+}
 .nextStep button {
-  @apply bg-green-400 p-2 px-3 text-lg mt-3 rounded-md flex items-center hover:brightness-110
+  @apply bg-green-400 p-2 px-3 text-lg rounded-md mx-auto flex items-center hover:brightness-110;
 }

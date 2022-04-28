@@ -25,7 +25,10 @@ const Pedir: NextPage = () => {
         <IoIosArrowForward className={styles.orderPr} />
         <span className={`${styles.orderProgress}`}>Finalizar</span>
       </header>
-      <FirstStep myCart={myCart} setCart={setCart} />
+      {
+        orderStep === 0 && <FirstStep myCart={myCart} setCart={setCart} />
+      }
+
       <div className={styles.nextStep}>
         <button
           onClick={() => {
