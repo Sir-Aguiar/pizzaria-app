@@ -5,7 +5,7 @@
   @apply w-full h-[calc(100%-60px)] flex flex-col items-center p-1;
 }
 .foodPicker {
-  @apply cursor-pointer w-full flex items-center justify-around text-lg font-semibold mb-4;
+  @apply cursor-pointer w-full py-2 flex items-center justify-around text-lg font-semibold mb-4;
 }
 .foodType {
   @apply transition-all;
