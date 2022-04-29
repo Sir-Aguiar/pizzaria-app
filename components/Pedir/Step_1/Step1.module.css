@@ -7,7 +7,7 @@
   @apply text-2xl text-center my-2;
 }
 .formulary {
-  @apply flex flex-col p-1 flex-1 max-w-[400px] mx-auto gap-1 min-h-[320px];
+  @apply flex flex-col p-2 flex-1 max-w-[400px] mx-auto gap-1 min-h-[320px];
 }
 .formulary input {
   @apply p-1 border-[1px] border-neutral-800 rounded-sm outline-none;

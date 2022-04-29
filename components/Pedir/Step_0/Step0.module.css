@@ -2,7 +2,7 @@
 @tailwind components;
 
 .foodContainer {
-  @apply w-full h-[calc(100%-60px)] flex flex-col items-center p-1;
+  @apply w-full h-[calc(95%-60px)] flex flex-col items-center p-1;
 }
 .foodPicker {
   @apply cursor-pointer w-full py-2 flex items-center justify-around text-lg font-semibold mb-4;
