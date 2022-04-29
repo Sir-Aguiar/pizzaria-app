@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 .mainContainer {
-  @apply h-full ;
+  @apply h-full;
 }
 .welcomeText {
   @apply text-2xl text-center my-2;
@@ -22,32 +22,44 @@
   @apply w-[65%];
 }
 .input_group2 {
-  @apply flex-col ;
+  @apply flex-col;
 }
 .subgroup_1 {
-  @apply my-1
+  @apply my-1;
 }
-.subgroup_1 input{
-  @apply w-full
+.subgroup_1 input {
+  @apply w-full;
 }
 .subgroup_2 {
   @apply flex gap-1;
 }
 .subgroup_2 input:nth-child(1) {
-  @apply w-full
+  @apply w-full;
 }
 .subgroup_2 input:nth-child(2) {
-  @apply w-[50%]
+  @apply w-[50%];
 }
 .subgroup_3 textarea {
-  @apply border-[1px] border-neutral-800 w-full p-1 min-h-[70px] max-h-[100px]
+  @apply border-[1px] border-neutral-800 w-full p-1 min-h-[70px] max-h-[100px];
 }
 .subgroup_3 {
-  @apply w-full my-1 flex flex-col gap-2
+  @apply w-full my-1 flex flex-col gap-2;
 }
 .subgroup_4 {
-  @apply w-full my-1 flex gap-1 justify-center items-center
+  @apply w-full my-1 flex gap-1 justify-center items-center;
 }
-.subgroup_4 input{
-  @apply w-[30%]
+.subgroup_4 input {
+  @apply w-[30%];
+}
+.userCart {
+  @apply flex flex-col max-h-[150px] overflow-y-auto my-2 p-1;
+}
+.userCartTitle {
+  @apply text-center text-xl;
+}
+.product {
+  @apply my-1 p-1 border-y-2 border-y-neutral-700 flex justify-around;
+}
+.fullPrice h1 {
+  @apply text-lg;
 }

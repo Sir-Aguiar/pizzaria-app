@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 .mainOrderContainer {
-  @apply mt-[60px] w-full h-screen min-h-[700px] flex flex-col overflow-hidden;
+  @apply mt-[60px] w-full h-screen min-h-[750px] flex flex-col overflow-hidden;
 }
 .orderHeader {
   @apply min-h-[50px]  h-[50px] bg-rose-600 flex p-1 items-center justify-around;
