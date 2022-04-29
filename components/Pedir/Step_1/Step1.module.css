@@ -58,7 +58,10 @@
   @apply text-center text-xl;
 }
 .product {
-  @apply my-1 p-1 border-y-2 border-y-neutral-700 flex justify-around;
+  @apply my-1 p-1 border-b-2 border-b-neutral-700 flex justify-around items-center;
+}
+.product p{
+  @apply flex-1 text-center
 }
 .fullPrice h1 {
   @apply text-lg;

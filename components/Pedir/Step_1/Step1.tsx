@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BsArrowRight } from "react-icons/bs";
 import { ProductsResponse } from "../../../scripts/GetterMenu";
 import styles from "./Step1.module.css";
 type SecondStepProps = {
@@ -49,9 +50,9 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart }) => {
       <div className={styles.userCart}>
         {myCart.map((product, index) => (
           <div className={styles.product} key={index}>
-            <span> {product.name}</span>
-            <span></span>
-            <span>{product.price}</span>
+            <p> {product.name}</p>
+            <BsArrowRight />
+            <p>{product.price}</p>
           </div>
         ))}
       </div>
