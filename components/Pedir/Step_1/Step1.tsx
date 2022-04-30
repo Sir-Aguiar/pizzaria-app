@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { ProductsResponse } from "../../../scripts/GetterMenu";
-import { HandleCEP, HandleFormulary} from "../../../scripts/HandleOrderFormulary";
+import { HandleCEP, OrderAPI } from "../../../scripts/HandleOrderFormulary";
 import styles from "./Step1.module.css";
-import { IoIosInformationCircleOutline } from "react-icons/io";
-import NextStep from "../../NextStep";
+
 type SecondStepProps = {
   myCart: ProductsResponse[];
   setStep: React.Dispatch<React.SetStateAction<number>>;
@@ -12,20 +11,43 @@ type SecondStepProps = {
 const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
   const [cartCost, setCartCost] = useState<number>(0);
   const [transportCost, setTransportCost] = useState<number>(0);
+
+  const HandleFormulary = (products: ProductsResponse[]) => {
+    const UserData = {
+      name: document.getElementById("name") as HTMLInputElement,
+      phone: document.getElementById("tel") as HTMLInputElement,
+      reference: document.getElementById("reference") as HTMLInputElement,
+      change: document.getElementById("change") as HTMLInputElement,
+      location: {
+        bairro: document.getElementById("bairro") as HTMLInputElement,
+        rua: document.getElementById("rua") as HTMLInputElement,
+        casa: document.getElementById("casa") as HTMLInputElement,
+      },
+    };
+  };
+
   useEffect(() => {
     let cartCostVariable = 0;
     myCart.forEach((product) => {
       cartCostVariable += Number(product.price.replace(",", "."));
     });
     setCartCost(Number(cartCostVariable.toFixed(2)));
+    
   }, [myCart]);
   return (
     <div className={styles.mainContainer}>
       <h1 className={styles.welcomeText}>Estamos quase lá!</h1>
       <form className={styles.formulary} id="userForm" onSubmit={(e) => e.preventDefault()}>
         <div className={styles.input_group1}>
-          <input type="text" name="name" id="name" placeholder="Nome" required/>
-          <input type="number" name="cep" id="cep" placeholder="CEP" maxLength={9} onBlur={(e) => HandleCEP(e.target.value)} />
+          <input type="text" name="name" id="name" placeholder="Nome" required />
+          <input
+            type="number"
+            name="cep"
+            id="cep"
+            placeholder="CEP"
+            maxLength={9}
+            onBlur={(e) => HandleCEP(e.target.value)}
+          />
         </div>
         <div className={styles.input_group2}>
           <div className={styles.subgroup_1}>
@@ -43,7 +65,7 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
               required
             ></textarea>
             <label htmlFor="tel">Telefone</label>
-            <input type="tel" name="tel" id="tel" placeholder="Ex: 9XXXXXXXX" required maxLength={9}/>
+            <input type="tel" name="tel" id="tel" placeholder="Ex: 9XXXXXXXX" required maxLength={9} />
           </div>
           <div className={styles.subgroup_4}>
             <label htmlFor="change">Troco para R$</label>

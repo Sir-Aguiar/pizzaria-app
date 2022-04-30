@@ -6,21 +6,8 @@ const CEPAPI = axios.create({
   baseURL: "https://viacep.com.br/ws/",
 });
 const OrderAPI = axios.create({
-  baseURL:""
-})
-const HandleFormulary = (products:ProductsResponse[]) => {
-  const UserData = {
-    name: document.getElementById("name") as HTMLInputElement ,
-    phone: document.getElementById("tel") as HTMLInputElement ,
-    reference: document.getElementById("reference") as HTMLInputElement ,
-    change: document.getElementById("change") as HTMLInputElement ,
-    location: {
-      bairro: document.getElementById("bairro") as HTMLInputElement ,
-      rua: document.getElementById("rua") as HTMLInputElement ,
-      casa: document.getElementById("casa") as HTMLInputElement ,
-    },
-  };
-};
+  baseURL: "",
+});
 
 const HandleCEP = async (cep: string) => {
   const bairro = document.getElementById("bairro") as HTMLInputElement;
@@ -37,4 +24,4 @@ const HandleCEP = async (cep: string) => {
       console.log(e);
     });
 };
-export { HandleFormulary, HandleCEP };
+export { OrderAPI, HandleCEP };
