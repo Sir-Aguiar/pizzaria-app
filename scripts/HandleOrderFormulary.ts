@@ -1,20 +1,25 @@
 import axios from "axios";
 import { FormEventHandler } from "react";
 import styles from "../components/Pedir/Step_1/Step1.module.css";
+import { ProductsResponse } from "./GetterMenu";
 const CEPAPI = axios.create({
   baseURL: "https://viacep.com.br/ws/",
 });
-
-const HandleFormulary = () => {
-  const UserInputs: HTMLInputElement[] = [
-    document.getElementById("reference") as HTMLInputElement,
-    document.getElementById("tel") as HTMLInputElement,
-    document.getElementById("change") as HTMLInputElement,
-    document.getElementById("name") as HTMLInputElement,
-    document.getElementById("bairro") as HTMLInputElement,
-    document.getElementById("rua") as HTMLInputElement,
-    document.getElementById("casa") as HTMLInputElement,
-  ];
+const OrderAPI = axios.create({
+  baseURL:""
+})
+const HandleFormulary = (products:ProductsResponse[]) => {
+  const UserData = {
+    name: document.getElementById("name") as HTMLInputElement ,
+    phone: document.getElementById("tel") as HTMLInputElement ,
+    reference: document.getElementById("reference") as HTMLInputElement ,
+    change: document.getElementById("change") as HTMLInputElement ,
+    location: {
+      bairro: document.getElementById("bairro") as HTMLInputElement ,
+      rua: document.getElementById("rua") as HTMLInputElement ,
+      casa: document.getElementById("casa") as HTMLInputElement ,
+    },
+  };
 };
 
 const HandleCEP = async (cep: string) => {

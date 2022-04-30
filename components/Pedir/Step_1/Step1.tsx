@@ -71,7 +71,7 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
           type="submit"
           form="userForm"
           onClick={() => {
-            HandleFormulary();
+            HandleFormulary(myCart);
           }}
         >
           {" "}
