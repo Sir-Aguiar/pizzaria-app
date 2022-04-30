@@ -24,8 +24,8 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
       <h1 className={styles.welcomeText}>Estamos quase lá!</h1>
       <form className={styles.formulary} id="userForm" onSubmit={(e) => e.preventDefault()}>
         <div className={styles.input_group1}>
-          <input type="text" name="name" id="name" placeholder="Nome" />
-          <input type="number" name="cep" id="cep" placeholder="CEP" onBlur={(e) => HandleCEP(e.target.value)} />
+          <input type="text" name="name" id="name" placeholder="Nome" required/>
+          <input type="number" name="cep" id="cep" placeholder="CEP" maxLength={9} onBlur={(e) => HandleCEP(e.target.value)} />
         </div>
         <div className={styles.input_group2}>
           <div className={styles.subgroup_1}>
@@ -43,7 +43,7 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
               required
             ></textarea>
             <label htmlFor="tel">Telefone</label>
-            <input type="tel" name="tel" id="tel" placeholder="Ex: 9XXXXXXXX" required />
+            <input type="tel" name="tel" id="tel" placeholder="Ex: 9XXXXXXXX" required maxLength={9}/>
           </div>
           <div className={styles.subgroup_4}>
             <label htmlFor="change">Troco para R$</label>

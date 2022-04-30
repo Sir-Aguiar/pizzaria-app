@@ -6,7 +6,6 @@ const CEPAPI = axios.create({
 });
 
 const HandleFormulary = () => {
-  let IsFormValid = true;
   const UserInputs: HTMLInputElement[] = [
     document.getElementById("reference") as HTMLInputElement,
     document.getElementById("tel") as HTMLInputElement,
@@ -16,15 +15,18 @@ const HandleFormulary = () => {
     document.getElementById("rua") as HTMLInputElement,
     document.getElementById("casa") as HTMLInputElement,
   ];
-  
 };
 
 const HandleCEP = async (cep: string) => {
   const bairro = document.getElementById("bairro") as HTMLInputElement;
   const rua = document.getElementById("rua") as HTMLInputElement;
   const response = await CEPAPI.get(`${cep}/json`);
-  const data = response.data;
-  bairro.value = data.bairro;
-  rua.value = data.logradouro;
+  
+  if (response.data.erro != "true" || !response.data.erro) {
+    const data = response.data;
+    bairro.value = data.bairro;
+    rua.value = data.logradouro;
+    return;
+  }
 };
 export { HandleFormulary, HandleCEP };
