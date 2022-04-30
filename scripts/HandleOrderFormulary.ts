@@ -20,13 +20,16 @@ const HandleFormulary = () => {
 const HandleCEP = async (cep: string) => {
   const bairro = document.getElementById("bairro") as HTMLInputElement;
   const rua = document.getElementById("rua") as HTMLInputElement;
-  const response = await CEPAPI.get(`${cep}/json`);
-  
-  if (response.data.erro != "true" || !response.data.erro) {
-    const data = response.data;
-    bairro.value = data.bairro;
-    rua.value = data.logradouro;
-    return;
-  }
+  CEPAPI.get(`${cep}/json`)
+    .then((res) => {
+      if (res.data.erro) {
+        return;
+      }
+      bairro.value = res.data.bairro;
+      rua.value = res.data.logradouro;
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 };
 export { HandleFormulary, HandleCEP };
