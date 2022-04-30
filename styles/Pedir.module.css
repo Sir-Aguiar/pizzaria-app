@@ -23,7 +23,7 @@
   @apply fill-neutral-700;
 }
 .nextStep {
-  @apply flex-1 my-2
+  @apply flex-1 my-2;
 }
 .nextStep button {
   @apply bg-green-400 p-2 px-3 text-lg rounded-md mx-auto flex items-center hover:brightness-110;

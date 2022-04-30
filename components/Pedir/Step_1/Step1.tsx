@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { ProductsResponse } from "../../../scripts/GetterMenu";
+import { HandleCEP, HandleFormulary, HandleFormularySubmit } from "../../../scripts/HandleOrderFormulary";
 import styles from "./Step1.module.css";
+import { NextStep, NextStepCTA } from "../../NextStep";
 type SecondStepProps = {
   myCart: ProductsResponse[];
+  setStep: React.Dispatch<React.SetStateAction<number>>;
 };
-const SecondStep: React.FC<SecondStepProps> = ({ myCart }) => {
+const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
   const [cartCost, setCartCost] = useState<number>(0);
   const [transportCost, setTransportCost] = useState<number>(0);
   useEffect(() => {
@@ -18,10 +21,15 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart }) => {
   return (
     <div className={styles.mainContainer}>
       <h1 className={styles.welcomeText}>Estamos quase lá!</h1>
-      <form className={styles.formulary}>
+      <form
+        className={styles.formulary}
+        onSubmit={(e) => {
+          HandleFormularySubmit(e);
+        }}
+      >
         <div className={styles.input_group1}>
           <input type="text" name="name" id="name" placeholder="Nome" />
-          <input type="number" name="cep" id="cep" placeholder="CEP" required />
+          <input type="number" name="cep" id="cep" placeholder="CEP" onBlur={(e) => HandleCEP(e.target.value)} />
         </div>
         <div className={styles.input_group2}>
           <div className={styles.subgroup_1}>
@@ -38,7 +46,8 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart }) => {
               placeholder="Ponto de referência ou informações adicionais sobre o local"
               required
             ></textarea>
-            <input type="tel" name="tel" id="tel" placeholder="Telefone" required />
+            <label htmlFor="tel">Telefone</label>
+            <input type="tel" name="tel" id="tel" placeholder="Ex: 9XXXXXXXX" required />
           </div>
           <div className={styles.subgroup_4}>
             <label htmlFor="change">Troco para R$</label>
@@ -61,6 +70,15 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart }) => {
         <h1>Frete: R${transportCost}</h1>
         <h1>Total a pagar: R${cartCost + transportCost}</h1>
       </div>
+      <NextStep>
+        <NextStepCTA
+          onClick={() => {
+            HandleFormulary();
+          }}
+        >
+          Prosseguir
+        </NextStepCTA>
+      </NextStep>
     </div>
   );
 };

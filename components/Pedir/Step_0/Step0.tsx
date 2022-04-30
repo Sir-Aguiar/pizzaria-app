@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../../scripts/FoodPicker";
 import { handleProducts, ProductsResponse } from "../../../scripts/GetterMenu";
+import { NextStep, NextStepCTA } from "../../NextStep";
 import { FoodCard } from "../FoodCard/FoodCard";
 import styles from "./Step0.module.css";
 type FirstStepProps = {
-
+  setStep: React.Dispatch<React.SetStateAction<number>>;
   setCart: React.Dispatch<React.SetStateAction<ProductsResponse[]>>;
   myCart: ProductsResponse[];
 };
-const FirstStep: React.FC<FirstStepProps> = ({ myCart, setCart }) => {
+const FirstStep: React.FC<FirstStepProps> = ({ myCart, setCart, setStep }) => {
   const [foodMenu, setFoodMenu] = useState<ProductsResponse[]>([]);
   const [foodType, setFoodType] = useState<PossibleFoods>("Lanches");
 
@@ -40,7 +41,15 @@ const FirstStep: React.FC<FirstStepProps> = ({ myCart, setCart }) => {
           <FoodCard key={index} food={food} addToCart={setCart} cart={myCart} />
         ))}
       </div>
-      
+      <NextStep>
+        <NextStepCTA
+          onClick={() => {
+            if (myCart.length > 0) setStep(1);
+          }}
+        >
+          Prosseguir
+        </NextStepCTA>
+      </NextStep>
     </div>
   );
 };
