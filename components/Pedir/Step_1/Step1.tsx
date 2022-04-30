@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { ProductsResponse } from "../../../scripts/GetterMenu";
-import { HandleCEP, HandleFormulary, HandleFormularySubmit } from "../../../scripts/HandleOrderFormulary";
+import { HandleCEP, HandleFormulary} from "../../../scripts/HandleOrderFormulary";
 import styles from "./Step1.module.css";
-import { NextStep, NextStepCTA } from "../../NextStep";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import NextStep from "../../NextStep";
 type SecondStepProps = {
   myCart: ProductsResponse[];
   setStep: React.Dispatch<React.SetStateAction<number>>;
@@ -21,12 +22,7 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
   return (
     <div className={styles.mainContainer}>
       <h1 className={styles.welcomeText}>Estamos quase lá!</h1>
-      <form
-        className={styles.formulary}
-        onSubmit={(e) => {
-          HandleFormularySubmit(e);
-        }}
-      >
+      <form className={styles.formulary} id="userForm" onSubmit={(e) => e.preventDefault()}>
         <div className={styles.input_group1}>
           <input type="text" name="name" id="name" placeholder="Nome" />
           <input type="number" name="cep" id="cep" placeholder="CEP" onBlur={(e) => HandleCEP(e.target.value)} />
@@ -70,15 +66,18 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
         <h1>Frete: R${transportCost}</h1>
         <h1>Total a pagar: R${cartCost + transportCost}</h1>
       </div>
-      <NextStep>
-        <NextStepCTA
+      <div className="nextStep">
+        <button
+          type="submit"
+          form="userForm"
           onClick={() => {
             HandleFormulary();
           }}
         >
-          Prosseguir
-        </NextStepCTA>
-      </NextStep>
+          {" "}
+          Prosseguir{" "}
+        </button>
+      </div>
     </div>
   );
 };

@@ -16,12 +16,9 @@ const HandleFormulary = () => {
     document.getElementById("rua") as HTMLInputElement,
     document.getElementById("casa") as HTMLInputElement,
   ];
-  const Formulary = document.querySelector(`.${styles.formulary}`) as HTMLFormElement;
-  Formulary.submit();
+  
 };
-const HandleFormularySubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-};
+
 const HandleCEP = async (cep: string) => {
   const bairro = document.getElementById("bairro") as HTMLInputElement;
   const rua = document.getElementById("rua") as HTMLInputElement;
@@ -30,4 +27,4 @@ const HandleCEP = async (cep: string) => {
   bairro.value = data.bairro;
   rua.value = data.logradouro;
 };
-export { HandleFormulary, HandleCEP, HandleFormularySubmit };
+export { HandleFormulary, HandleCEP };
