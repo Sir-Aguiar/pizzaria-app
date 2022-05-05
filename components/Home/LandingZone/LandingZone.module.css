@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 .landingZone {
-  @apply h-full max-h-[750px] lg:h-[50%] xl:h-[40%] min-h-[750px] xl:min-h-[400px] lg:min-h-[400px]
+  @apply h-full max-h-[750px] lg:h-[50%] xl:h-[40%] min-h-[650px] xl:min-h-[400px] lg:min-h-[400px]
   w-full 
   flex flex-col lg:flex-row xl:flex-row justify-around items-center
   p-1 
