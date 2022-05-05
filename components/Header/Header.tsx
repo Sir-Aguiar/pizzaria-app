@@ -10,11 +10,7 @@ const Header: React.FC = () => {
         <img src="/logo.png" alt="Logo da pizzaria" className={`${styles.logo}`} />
       </Link>
       <nav className={`${styles.navigation}`}>
-        <Link href="/order/pedir" passHref>
-          <button className={`${styles.order}`}>
-            Pedir <MD.MdDeliveryDining size={20} />
-          </button>
-        </Link>
+        
       </nav>
     </header>
   );

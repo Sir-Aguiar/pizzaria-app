@@ -1,0 +1,7 @@
+@tailwind components;
+@tailwind utilities;
+
+.order {
+  @apply flex items-center gap-3 justify-center p-4 bg-rose-600 rounded-full text-xl text-slate-300 w-[60%];
+}
+

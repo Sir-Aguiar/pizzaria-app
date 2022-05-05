@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Menu.module.css";
 import * as fa from "react-icons/fa";
-import * as menu from "../../../menu.json";
+import { handleProducts, ProductsResponse } from "../../../scripts/GetterMenu";
 
 type FoodType = "Lanches" | "Pizzas";
 
 type MenuTypes = {};
 const Menu: React.FC<MenuTypes> = () => {
   const [menuSection, setMenuSection] = useState<"Lanches" | "Pizzas">("Lanches");
+  const [myMenu, setMenu] = useState<ProductsResponse[]>([])
+  useEffect(()=>{
+    handleProducts(menuSection).then((res) => {
+      setMenu(res);
+    });
+  },[menuSection]);
   return (
     <div className={`${styles.menuShowcase}`}>
       <div className={styles.menuSectionPicker}>
@@ -25,7 +31,7 @@ const Menu: React.FC<MenuTypes> = () => {
         </h1>
       </div>
       <div className={styles.menuSection}>
-        {menu[menuSection].map((food, index) => (
+        {myMenu.map((food, index) => (
           <div
             key={index}
             className={`${styles.food}`}
@@ -35,12 +41,12 @@ const Menu: React.FC<MenuTypes> = () => {
             }}
           >
             <div className={`${styles.apresentation}`}>
-              <h2>{food.Sabor}</h2>
+              <h2>{food.name}</h2>
               <fa.FaArrowDown />
             </div>
             <div className={styles.foodCard}>
-              <p>{food.Description}</p>
-              <span>R$ {food.Price}</span>
+              <p>{food.description}</p>
+              <span>R$ {food.price}</span>
             </div>
           </div>
         ))}

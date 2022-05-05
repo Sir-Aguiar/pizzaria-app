@@ -2,5 +2,5 @@
 @tailwind utilities;
 
 .tutorialComponent {
-  @apply bg-red-600 h-full w-full;
+  @apply h-full w-full;
 }

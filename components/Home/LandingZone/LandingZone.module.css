@@ -1,14 +1,14 @@
 @tailwind components;
 @tailwind utilities;
 .landingZone {
-  @apply h-full max-h-[600px] lg:h-[50%] xl:h-[40%] min-h-[600px] xl:min-h-[400px] lg:min-h-[400px]
+  @apply h-full max-h-[750px] lg:h-[50%] xl:h-[40%] min-h-[750px] xl:min-h-[400px] lg:min-h-[400px]
   w-full 
-  flex flex-col lg:flex-row xl:flex-row 
+  flex flex-col lg:flex-row xl:flex-row justify-around items-center
   p-1 
-  bg-[#dfbf3ce3] shadow-sm;
+  bg-slate-100 shadow-sm;
 }
 .txtSec {
-  @apply flex-1 lg:flex lg:flex-col xl:flex xl:flex-col  xl:justify-center lg:justify-center text-center lg:text-left xl:text-left;
+  @apply lg:flex lg:flex-col xl:flex xl:flex-col  xl:justify-center lg:justify-center text-center lg:text-left xl:text-left;
 }
 .iconSec {
   @apply lg:flex-1 lg:flex lg:items-center  xl:w-[40%] xl:flex xl:items-center;
