@@ -1,10 +1,6 @@
 import React from "react";
 import styles from "./Modal.module.css";
 import { AiFillCloseCircle } from "react-icons/ai";
-type ModalProps = {
-  onClose: React.Dispatch<React.SetStateAction<boolean>>;
-  food: MenuItem;
-};
 
 const Modal: React.FC<ModalProps> = ({ onClose, food }) => {
   return (

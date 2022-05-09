@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
-import { HandleFoodTypes,  } from "../../../scripts/FoodPicker";
+import { HandleFoodTypes } from "../../../scripts/FoodPicker";
 import { handleProducts } from "../../../scripts/GetterMenu";
 import NextStep from "../../NextStep";
-
+import styles from "./OrderTutorial.module.css";
 import { FoodCard } from "../FoodCard/FoodCard";
-import styles from "./Step0.module.css";
-type FirstStepProps = {
-  setStep: React.Dispatch<React.SetStateAction<number>>;
-  setCart: React.Dispatch<React.SetStateAction<MenuItem[]>>;
-  myCart: MenuItem[];
-};
-const foodTypes:Menu[] = ["Bebidas","Lanches","Pizzas","Ofertas"]
-const FirstStep: React.FC<FirstStepProps> = ({ myCart, setCart, setStep }) => {
+
+const foodTypes: Menu[] = ["Bebidas", "Lanches", "Pizzas", "Ofertas"];
+const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) => {
   const [foodMenu, setFoodMenu] = useState<MenuItem[]>([]);
   const [foodType, setFoodType] = useState<Menu>("Lanches");
 

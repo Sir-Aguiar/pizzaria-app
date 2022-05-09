@@ -3,8 +3,7 @@ import styles from "./Menu.module.css";
 import * as fa from "react-icons/fa";
 import { handleProducts } from "../../../scripts/GetterMenu";
 
-type MenuTypes = {};
-const Menu: React.FC<MenuTypes> = () => {
+const Menu: React.FC<MenuProps> = () => {
   const [menuSection, setMenuSection] = useState<Menu>("Lanches");
   const [myMenu, setMenu] = useState<MenuItem[]>([]);
   useEffect(() => {

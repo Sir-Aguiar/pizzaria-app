@@ -5,12 +5,6 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import Modal from "../Modal/Modal";
 import { PicSide } from "./picSide";
 
-type FoodCardProps = {
-  food: MenuItem;
-  addToCart: React.Dispatch<React.SetStateAction<MenuItem[]>>;
-  cart: MenuItem[];
-};
-
 const FoodCard: React.FC<FoodCardProps> = ({ food, addToCart, cart }) => {
   const [modalOpen, setModalOpen] = useState(false);
   return (

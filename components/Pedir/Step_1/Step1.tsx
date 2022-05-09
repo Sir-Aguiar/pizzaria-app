@@ -3,11 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { HandleCEP, OrderAPI } from "../../../scripts/HandleOrderFormulary";
 import styles from "./Step1.module.css";
 
-type SecondStepProps = {
-  myCart: MenuItem[];
-  setStep: React.Dispatch<React.SetStateAction<number>>;
-};
-const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
+const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
   const [cartCost, setCartCost] = useState<number>(0);
   const [transportCost, setTransportCost] = useState<number>(0);
 

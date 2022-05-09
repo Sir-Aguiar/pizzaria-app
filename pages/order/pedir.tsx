@@ -9,7 +9,7 @@ import { handleProducts } from "../../scripts/GetterMenu";
 import FirstStep from "../../components/Pedir/Step_0/Step0";
 import SecondStep from "../../components/Pedir/Step_1/Step1";
 
-const Pedir: NextPage = () => {
+const Pedir: NextPage<RootOrderProps> = () => {
   const [orderStep, setOrderStep] = useState(0);
   const [myCart, setCart] = useState<MenuItem[]>([]);
   useEffect(() => {
