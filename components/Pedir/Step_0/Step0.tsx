@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { HandleFoodTypes } from "../../../scripts/FoodPicker";
 import { handleProducts } from "../../../scripts/GetterMenu";
 import NextStep from "../../NextStep";
-import styles from "./OrderTutorial.module.css";
+import styles from "./Step0.module.css";
 import { FoodCard } from "../FoodCard/FoodCard";
 
 const foodTypes: Menu[] = ["Bebidas", "Lanches", "Pizzas", "Ofertas"];
