@@ -4,17 +4,17 @@ import styles from "../../styles/Pedir.module.css";
 import { IoIosArrowForward, IoIosInformationCircleOutline } from "react-icons/io";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { setOrderStepStyle } from "../../scripts/OrderSteps";
-import { foodTypes, HandleFoodTypes, PossibleFoods } from "../../scripts/FoodPicker";
-import { handleProducts, ProductsResponse } from "../../scripts/GetterMenu";
+import { HandleFoodTypes } from "../../scripts/FoodPicker";
+import { handleProducts } from "../../scripts/GetterMenu";
 import FirstStep from "../../components/Pedir/Step_0/Step0";
 import SecondStep from "../../components/Pedir/Step_1/Step1";
 
 const Pedir: NextPage = () => {
   const [orderStep, setOrderStep] = useState(0);
-  const [myCart, setCart] = useState<ProductsResponse[]>([]);
+  const [myCart, setCart] = useState<MenuItem[]>([]);
   useEffect(() => {
     setOrderStepStyle(orderStep);
-  }, [orderStep, foodTypes]);
+  }, [orderStep]);
   return (
     <main className={`${styles.mainOrderContainer}`}>
       <header className={styles.orderHeader}>
@@ -26,8 +26,6 @@ const Pedir: NextPage = () => {
       </header>
       {orderStep === 0 && <FirstStep setStep={setOrderStep} myCart={myCart} setCart={setCart} />}
       {orderStep === 1 && <SecondStep setStep={setOrderStep} myCart={myCart} />}
-
-      
     </main>
   );
 };

@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { ProductsResponse } from "../../../scripts/GetterMenu";
 import { HandleCEP, OrderAPI } from "../../../scripts/HandleOrderFormulary";
 import styles from "./Step1.module.css";
 
 type SecondStepProps = {
-  myCart: ProductsResponse[];
+  myCart: MenuItem[];
   setStep: React.Dispatch<React.SetStateAction<number>>;
 };
 const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
   const [cartCost, setCartCost] = useState<number>(0);
   const [transportCost, setTransportCost] = useState<number>(0);
 
-  const HandleFormulary = (products: ProductsResponse[]) => {
+  const HandleFormulary = (products: MenuItem[]) => {
     const UserData = {
       name: document.getElementById("name") as HTMLInputElement,
       phone: document.getElementById("tel") as HTMLInputElement,
@@ -32,7 +31,6 @@ const SecondStep: React.FC<SecondStepProps> = ({ myCart, setStep }) => {
       cartCostVariable += Number(product.price.replace(",", "."));
     });
     setCartCost(Number(cartCostVariable.toFixed(2)));
-    
   }, [myCart]);
   return (
     <div className={styles.mainContainer}>

@@ -3,13 +3,12 @@ import React, { useEffect, useState } from "react";
 import styles from "./FoodCard.module.css";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import Modal from "../Modal/Modal";
-import { ProductsResponse } from "../../../scripts/GetterMenu";
 import { PicSide } from "./picSide";
 
 type FoodCardProps = {
-  food: ProductsResponse;
-  addToCart: React.Dispatch<React.SetStateAction<ProductsResponse[]>>;
-  cart: ProductsResponse[];
+  food: MenuItem;
+  addToCart: React.Dispatch<React.SetStateAction<MenuItem[]>>;
+  cart: MenuItem[];
 };
 
 const FoodCard: React.FC<FoodCardProps> = ({ food, addToCart, cart }) => {

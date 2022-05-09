@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Menu.module.css";
 import * as fa from "react-icons/fa";
-import { handleProducts, ProductsResponse } from "../../../scripts/GetterMenu";
-
-type FoodType = "Lanches" | "Pizzas";
+import { handleProducts } from "../../../scripts/GetterMenu";
 
 type MenuTypes = {};
 const Menu: React.FC<MenuTypes> = () => {
-  const [menuSection, setMenuSection] = useState<"Lanches" | "Pizzas">("Lanches");
-  const [myMenu, setMenu] = useState<ProductsResponse[]>([])
-  useEffect(()=>{
+  const [menuSection, setMenuSection] = useState<Menu>("Lanches");
+  const [myMenu, setMenu] = useState<MenuItem[]>([]);
+  useEffect(() => {
     handleProducts(menuSection).then((res) => {
       setMenu(res);
     });
-  },[menuSection]);
+  }, [menuSection]);
   return (
     <div className={`${styles.menuShowcase}`}>
       <div className={styles.menuSectionPicker}>
