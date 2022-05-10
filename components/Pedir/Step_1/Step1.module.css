@@ -63,6 +63,9 @@
 .product p{
   @apply flex-1 text-center
 }
+.fullPrice {
+  @apply p-1
+}
 .fullPrice h1 {
   @apply text-lg;
 }

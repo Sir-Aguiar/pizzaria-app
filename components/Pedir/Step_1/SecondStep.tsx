@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { HandleCEP, OrderAPI } from "../../../scripts/HandleOrderFormulary";
+import { HandleCEP } from "../../../scripts/HandleOrderFormulary";
 import styles from "./Step1.module.css";
 
 const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
