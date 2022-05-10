@@ -7,7 +7,6 @@ const Slider: React.FC<CarouselProps> = ({ Card }) => {
   const [carouselScroll, setCarouselScroll] = useState<number>();
   const carousel = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    console.log(carouselScroll);
     setCarouselScroll(((carousel.current?.scrollWidth || 0) - (carousel.current?.offsetWidth || 0)) * -1);
   }, []);
 
