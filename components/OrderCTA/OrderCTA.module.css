@@ -2,5 +2,5 @@
 @tailwind utilities;
 
 .order {
-  @apply flex items-center gap-3 justify-center p-4 py-3 bg-violet-700 rounded-full text-xl text-slate-300 w-[60%]  relative shadow-order-cta;
+  @apply flex items-center gap-3 justify-center p-4 py-3 bg-rose-700 rounded-full text-xl text-slate-300 w-[60%]  relative shadow-order-cta;
 }
