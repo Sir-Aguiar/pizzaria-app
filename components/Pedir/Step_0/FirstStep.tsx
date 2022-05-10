@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { IoIosArrowForward } from "react-icons/io";
 import { HandleFoodTypes } from "../../../scripts/FoodPicker";
 import { handleProducts } from "../../../scripts/GetterMenu";
 import NextStep from "../../NextStep";

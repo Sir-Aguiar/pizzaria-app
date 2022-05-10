@@ -1,13 +1,10 @@
 import { NextPage } from "next";
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/Pedir.module.css";
-import { IoIosArrowForward, IoIosInformationCircleOutline } from "react-icons/io";
-import { AiOutlineInfoCircle } from "react-icons/ai";
+import { IoIosArrowForward } from "react-icons/io";
 import { setOrderStepStyle } from "../../scripts/OrderSteps";
-import { HandleFoodTypes } from "../../scripts/FoodPicker";
-import { handleProducts } from "../../scripts/GetterMenu";
-import FirstStep from "../../components/Pedir/Step_0/Step0";
-import SecondStep from "../../components/Pedir/Step_1/Step1";
+import FirstStep from "../../components/Pedir/Step_0/FirstStep";
+import SecondStep from "../../components/Pedir/Step_1/SecondStep";
 
 const Pedir: NextPage<RootOrderProps> = () => {
   const [orderStep, setOrderStep] = useState(0);
