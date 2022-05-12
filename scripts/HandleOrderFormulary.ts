@@ -1,7 +1,4 @@
 import axios from "axios";
-import { FormEventHandler } from "react";
-import styles from "../components/Pedir/Step_1/Step1.module.css";
-import { ProductsResponse } from "./GetterMenu";
 const CEPAPI = axios.create({
   baseURL: "https://viacep.com.br/ws/",
 });
