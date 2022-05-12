@@ -4,3 +4,6 @@
 .tutorialComponent {
   @apply h-full w-full;
 }
+.mainTitle {
+  @apply text-center text-xl my-2 font-Plex;
+}

@@ -8,13 +8,11 @@
   bg-slate-100 shadow-sm;
 }
 .txtSec {
-  @apply lg:flex lg:flex-col xl:flex xl:flex-col  xl:justify-center lg:justify-center text-center lg:text-left xl:text-left;
+  @apply flex flex-col items-center text-center lg:text-left xl:text-left flex-1 gap-2;
 }
+
 .iconSec {
-  @apply lg:flex-1 lg:flex lg:items-center  xl:w-[40%] xl:flex xl:items-center;
-}
-.iconSec img {
-  @apply max-h-[350px] min-h-[280px] mx-auto;
+  @apply flex-1 max-h-[400px];
 }
 
 .txtSec h1 {

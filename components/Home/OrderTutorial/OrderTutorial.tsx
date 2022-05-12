@@ -5,6 +5,7 @@ import { Cards } from "../../../tutorial.json";
 const OrderTutorial: React.FC<OrderTutorialProps> = () => {
   return (
     <div className={styles.tutorialComponent}>
+      <h1 className={styles.mainTitle}>Como usar nossos serviços</h1>
       <Slider Card={Cards} />
     </div>
   );
