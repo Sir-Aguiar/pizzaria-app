@@ -12,7 +12,7 @@
 }
 
 .iconSec {
-  @apply flex-1 max-h-[400px];
+  @apply flex-1 max-h-[400px] max-w-[90%] ml-auto;
 }
 
 .txtSec h1 {
