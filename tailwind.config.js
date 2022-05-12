@@ -38,6 +38,7 @@ module.exports = {
       },
       boxShadow: {
         'price': '2px 2px 3px rgb(60,60,60,.4), -2px -1px 3px rgb(60,60,60,.4)',
+        'tutorial-card': ' rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px',
         "order-cta":"5px 5px 8px rgb(156,56,56,.5), -5px 5px 8px rgb(67,56,189,.4)"
       }
     },

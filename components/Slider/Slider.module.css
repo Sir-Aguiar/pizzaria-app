@@ -2,15 +2,21 @@
 @tailwind utilities;
 
 .item {
-  @apply min-h-[25rem] min-w-[18rem] p-2 rounded-md text-center flex flex-col items-center overflow-hidden m-1 shadow-md;
+  @apply min-h-[25rem] min-w-[18rem] p-2 rounded-md text-center flex flex-col items-center overflow-hidden m-1 shadow-tutorial-card;
 }
 
 .innerCarousel {
-  @apply flex;
+  @apply flex p-1;
 }
 .carousel {
   @apply overflow-hidden cursor-grab max-w-xl mx-auto;
 }
 .cardHeader {
-  @apply h-2/5 w-full rounded-sm;
+  @apply h-2/5 p-2 my-1 max-w-[50%] rounded-sm;
+}
+.cardTitle {
+  @apply my-2 text-xl
+}
+.cardBody {
+  @apply text-base 
 }
