@@ -15,7 +15,7 @@
   @apply h-2/5 p-2 my-1 max-w-[50%] rounded-sm;
 }
 .cardTitle {
-  @apply my-2 text-xl
+  @apply my-2 text-xl font-semibold
 }
 .cardBody {
   @apply text-base 

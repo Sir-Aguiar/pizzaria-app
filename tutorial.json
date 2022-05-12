@@ -2,26 +2,26 @@
   "Cards": [
     {
       "image": "./FirstStepIcon.png",
-      "title": "Passo 1",
-      "body": "Ao entrar na seção de pedidos, verá uma lista com vários pratos. Clique na imagem do prato que deseja adicionar ao seu carrinho. Ao completar sua lista de desejos, clique em prosseguir.",
+      "title": "Clique no botão acima",
+      "body": "Ao entrar na seção de pedidos, clique na imagem do prato para adicioná-lo ao carrinho. Ao completar sua lista de desejos clique em prosseguir.",
       "alt": ""
     },
     {
       "image": "./SecondStepIcon.png",
-      "title": "Passo 2",
-      "body": "Insira alguns dados necessários para que a entrega seja realizada, como: Endereço, forma de pagamento, número de celular, etc... (Suas informações serão protegidas e não serão expostas)",
+      "title": "Nos informe",
+      "body": "Insira algumas informações necessárias para que realizemos sua entrega (Suas informações serão protegidas e não serão expostas a ninguém de fora da nossa equipe!)",
       "alt": ""
     },
     {
       "image": "./ThirdStepIcon.png",
-      "title": "Passo 3",
-      "body": "Para garantir nossa segurança e sua elegibilidade, iremos enviar um SMS com código único de 6 digitos ao telefone que você nos informou anteriormente.",
+      "title": "Confirme sua identidade",
+      "body": "Será enviado um SMS com código único de 6 digitos ao telefone que você nos informar, insira-o na caixa de dialogo que será aberta.",
       "alt": ""
     },
     {
       "image": "./FourthStepIcon.png",
-      "title": "Passo 4",
-      "body": "Confirmando sua identidade, aguarde e acompanhe o progresso de seu pedido. Enquanto seu pedido não for marcado como concluído não poderá realizar outro. Temos uma equipe a sua disposição para suporte e lhe garantir a melhor experiência do mercado!",
+      "title": "Daqui pra frente é conosco!",
+      "body": "Aguarde e acompanhe o progresso de seu pedido, temos uma equipe à sua disposição que lhe garantirá a melhor experiência do mercado!",
       "alt": ""
     }
   ]
