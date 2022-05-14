@@ -9,7 +9,7 @@
   @apply flex p-1;
 }
 .carousel {
-  @apply overflow-hidden cursor-grab max-w-xl mx-auto;
+  @apply overflow-hidden cursor-grab w-full max-w-[750px] mx-auto;
 }
 .cardHeader {
   @apply h-2/5 p-2 my-1 max-w-[50%] rounded-sm;

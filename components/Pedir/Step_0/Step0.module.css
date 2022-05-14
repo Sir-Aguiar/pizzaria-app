@@ -14,10 +14,10 @@
   @apply relative after:block after:absolute after:h-2 after:w-2 after:rounded-full after:bg-rose-500 after:-bottom-3 after:left-1/2 after:-translate-x-1/2 text-rose-500;
 }
 .avaibleMenu {
-  @apply h-[calc(90%-60px)] w-full max-w-[500px] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
+  @apply h-[calc(90%-60px)] w-full min-w-[280px] max-w-[400px] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
 }
 .foodCart {
-  @apply w-[95%] min-h-[200px] shadow-price rounded-md my-2 flex flex-col overflow-y-auto;
+  @apply w-[95%] max-w-[350px] min-h-[200px] shadow-price rounded-md my-2 flex flex-col overflow-y-auto;
 }
 .cartTitle {
   @apply text-center text-xl my-1;
