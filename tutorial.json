@@ -15,7 +15,7 @@
     {
       "image": "./ThirdStepIcon.png",
       "title": "Confirme sua identidade",
-      "body": "Será enviado um SMS com código único ao telefone que nos informar, insira-o na caixa que será aberta.",
+      "body": "Irá receber um SMS com um código único ao telefone que nos informar, insira-o na caixa que será aberta.",
       "alt": ""
     },
     {
