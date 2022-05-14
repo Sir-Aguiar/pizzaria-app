@@ -5,5 +5,5 @@
   @apply h-full w-full;
 }
 .mainTitle {
-  @apply text-center text-xl my-2 font-Plex;
+  @apply text-center text-2xl my-2 font-Plex;
 }

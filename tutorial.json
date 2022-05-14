@@ -3,25 +3,25 @@
     {
       "image": "./FirstStepIcon.png",
       "title": "Clique no botão acima",
-      "body": "Ao entrar na seção de pedidos, clique na imagem do prato para adicioná-lo ao carrinho. Ao completar sua lista de desejos clique em prosseguir.",
+      "body": "Entrando na seção de pedidos, clique na imagem do prato para adicioná-lo ao carrinho. Ao completar sua lista de desejos clique em prosseguir.",
       "alt": ""
     },
     {
       "image": "./SecondStepIcon.png",
       "title": "Nos informe",
-      "body": "Insira algumas informações necessárias para que realizemos sua entrega (Suas informações serão protegidas e não serão expostas a ninguém de fora da nossa equipe!)",
+      "body": "Insira algumas informações necessárias para que realizemos sua entrega (Suas não serão expostas a ninguém de fora da nossa equipe!)",
       "alt": ""
     },
     {
       "image": "./ThirdStepIcon.png",
       "title": "Confirme sua identidade",
-      "body": "Será enviado um SMS com código único de 6 digitos ao telefone que você nos informar, insira-o na caixa de dialogo que será aberta.",
+      "body": "Será enviado um SMS com código único ao telefone que nos informar, insira-o na caixa que será aberta.",
       "alt": ""
     },
     {
       "image": "./FourthStepIcon.png",
       "title": "Daqui pra frente é conosco!",
-      "body": "Aguarde e acompanhe o progresso de seu pedido, temos uma equipe à sua disposição que lhe garantirá a melhor experiência do mercado!",
+      "body": "Acompanhe o progresso de seu pedido, temos uma equipe à sua disposição que lhe garantirá a melhor experiência do mercado!",
       "alt": ""
     }
   ]
