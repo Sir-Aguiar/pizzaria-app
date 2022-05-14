@@ -2,7 +2,7 @@
 @tailwind components;
 
 .foodContainer {
-  @apply w-full h-[calc(95%-60px)] flex flex-col items-center p-1;
+  @apply w-full min-h-[calc(95%-60px)] flex flex-col items-center p-1;
 }
 .foodPicker {
   @apply cursor-pointer w-full py-2 flex items-center justify-around text-lg font-semibold mb-4;
@@ -15,4 +15,10 @@
 }
 .avaibleMenu {
   @apply h-[calc(90%-60px)] w-full max-w-[500px] flex flex-col overflow-y-auto overflow-x-hidden px-2 py-1;
+}
+.foodCart {
+  @apply w-[95%] min-h-[200px] shadow-price rounded-md my-2 flex flex-col overflow-y-auto;
+}
+.cartTitle {
+  @apply text-center text-xl my-1;
 }

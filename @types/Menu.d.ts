@@ -14,4 +14,7 @@ declare type TGetProducts = {
   Pizzas: MenuItem[];
   Bebidas: MenuItem[];
   Ofertas: MenuItem[];
-}
+};
+declare type CartChildProps = {
+  food: MenuItem;
+};

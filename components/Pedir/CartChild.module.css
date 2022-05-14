@@ -1,0 +1,10 @@
+@tailwind components;
+@tailwind utilities;
+
+.cartChild {
+  @apply flex items-center justify-around ;
+}
+.name,
+.price {
+  @apply text-center flex-1 my-1;
+}

@@ -4,6 +4,7 @@ import { handleProducts } from "../../../scripts/GetterMenu";
 import NextStep from "../../NextStep";
 import styles from "./Step0.module.css";
 import { FoodCard } from "../FoodCard/FoodCard";
+import CartChild from "../CartChild";
 
 const foodTypes: Menu[] = ["Bebidas", "Lanches", "Pizzas", "Ofertas"];
 const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) => {
@@ -35,6 +36,12 @@ const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) 
       <div className={styles.avaibleMenu}>
         {foodMenu.map((food, index) => (
           <FoodCard key={index} food={food} addToCart={setCart} cart={myCart} />
+        ))}
+      </div>
+      <div className={styles.foodCart}>
+        <h1 className={styles.cartTitle}>{myCart.length < 1 ? "Seu carrinho está vazio" : "Seu carrinho"}</h1>
+        {myCart.map((food) => (
+          <CartChild key={food._id} food={food} />
         ))}
       </div>
       <NextStep
