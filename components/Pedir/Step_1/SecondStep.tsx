@@ -6,7 +6,7 @@ import styles from "./Step1.module.css";
 const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
   const [cartCost, setCartCost] = useState<number>(0);
   const [transportCost, setTransportCost] = useState<number>(0);
-
+  const [paymentMethod, setPaymentMethod] = useState<string>("Card");
   const HandleFormulary = (products: MenuItem[]) => {
     const UserData = {
       name: document.getElementById("name") as HTMLInputElement,
@@ -62,8 +62,17 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
             <input type="tel" name="tel" id="tel" placeholder="Ex: 9XXXXXXXX" required maxLength={9} />
           </div>
           <div className={styles.subgroup_4}>
-            <label htmlFor="change">Troco para R$</label>
-            <input type="number" name="change" id="change" required />
+            <h1>Método de pagamento</h1>
+            <select onChange={(e) => setPaymentMethod(e.target.value)}>
+              <option value="Card">Cartão de débito/crédito</option>
+              <option value="Cash">Dinheiro</option>
+            </select>
+            {paymentMethod == "Cash" && (
+              <div className={styles.change}>
+                <label htmlFor="change">Troco para R$</label>
+                <input type="number" name="change" id="change" required />
+              </div>
+            )}
           </div>
         </div>
       </form>
