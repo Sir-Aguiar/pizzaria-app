@@ -1,6 +1,5 @@
 @tailwind base;
 
-
 *::-webkit-scrollbar {
   width: 8px;
 }
@@ -8,11 +7,11 @@
   background-color: whitesmoke;
 }
 *::-webkit-scrollbar-thumb {
-  @apply bg-yellow-400
+  @apply bg-yellow-400;
 }
 .nextStep {
-  @apply flex-1 my-3
+  @apply flex-1 my-3;
 }
 .nextStep button {
-  @apply bg-green-400 p-2 px-3 text-lg rounded-md mx-auto flex items-center hover:brightness-110;
+  @apply bg-green-400 p-2 px-6 text-gray-700 border-2 border-emerald-500 text-[17px] rounded-full mx-auto flex items-center hover:brightness-105 transition-all hover:shadow-price shadow-emerald-300 duration-300;
 }
