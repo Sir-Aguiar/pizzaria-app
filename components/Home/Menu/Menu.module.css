@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 .menuShowcase {
-  @apply border-2 p-3 h-full w-full flex flex-col justify-around items-center bg-slate-200;
+  @apply border-2 p-3 h-full w-full flex flex-col justify-around items-center ;
 }
 .menuSectionPicker {
   @apply mb-2;

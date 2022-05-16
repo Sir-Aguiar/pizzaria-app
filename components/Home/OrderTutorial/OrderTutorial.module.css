@@ -2,8 +2,8 @@
 @tailwind utilities;
 
 .tutorialComponent {
-  @apply h-full w-full;
+  @apply h-full w-full bg-[#d02b46] flex flex-col items-center justify-around;
 }
 .mainTitle {
-  @apply text-center text-2xl my-2 font-Plex;
+  @apply text-center text-2xl my-2 font-Plex text-slate-300 xl:text-3xl;
 }
