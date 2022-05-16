@@ -3,15 +3,15 @@
 import { NextPage } from "next";
 import React from "react";
 import styles from "../styles/HomePage.module.css";
-import Menu from "../components/Home/Menu/Menu";
 import LandingZone from "../components/Home/LandingZone/LandingZone";
 import OrderTutorial from "../components/Home/OrderTutorial/OrderTutorial";
+import About from "../components/Home/About/About";
 const HomePage: NextPage = () => {
   return (
     <main className={`${styles.mainContainer}`}>
       <LandingZone />
       <OrderTutorial />
-      <Menu />
+      <About />
     </main>
   );
 };
