@@ -17,4 +17,5 @@ declare type TGetProducts = {
 };
 declare type CartChildProps = {
   food: MenuItem;
+  remove: (food: MenuItem) => void;
 };

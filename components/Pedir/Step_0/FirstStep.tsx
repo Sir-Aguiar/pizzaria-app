@@ -10,13 +10,16 @@ const foodTypes: Menu[] = ["Bebidas", "Lanches", "Pizzas", "Ofertas"];
 const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) => {
   const [foodMenu, setFoodMenu] = useState<MenuItem[]>([]);
   const [foodType, setFoodType] = useState<Menu>("Lanches");
-
+  const RemoveFromFoodMenu = (food: MenuItem) => {
+    setCart((oldCart) => oldCart.filter((item) => item != food));
+  };
   useEffect(() => {
     HandleFoodTypes(foodType, setFoodType);
     handleProducts(foodType).then((res) => {
       setFoodMenu(res);
     });
-  }, [foodType]);
+    console.log(myCart);
+  }, [foodType, myCart]);
   return (
     <div className={`${styles.foodContainer}`}>
       <div className={`${styles.foodPicker}`}>
@@ -40,8 +43,8 @@ const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) 
       </div>
       <div className={styles.foodCart}>
         <h1 className={styles.cartTitle}>{myCart.length < 1 ? "Seu carrinho está vazio" : "Seu carrinho"}</h1>
-        {myCart.map((food) => (
-          <CartChild key={food._id} food={food} />
+        {myCart.map((food, index) => (
+          <CartChild key={index} food={food} remove={RemoveFromFoodMenu} />
         ))}
       </div>
       <NextStep
