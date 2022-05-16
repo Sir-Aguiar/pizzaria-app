@@ -2,9 +2,12 @@
 @tailwind utilities;
 
 .cartChild {
-  @apply flex items-center justify-around ;
+  @apply flex items-center justify-around;
 }
 .name,
 .price {
   @apply text-center flex-1 my-1;
+}
+.remove {
+  @apply mx-3 fill-red-600;
 }
