@@ -76,5 +76,5 @@
   @apply text-lg;
 }
 .ctaContainer {
-  @apply flex my-3;
+  @apply flex my-3 justify-center max-w-[500px] mx-auto;
 }

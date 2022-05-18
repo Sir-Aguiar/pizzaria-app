@@ -19,6 +19,6 @@
   @apply grayscale-[60] cursor-not-allowed;
 }
 .nextStep button.secondary {
-  @apply border-blue-700 bg-transparent;
+  @apply border-red-400 bg-transparent;
 }
 
