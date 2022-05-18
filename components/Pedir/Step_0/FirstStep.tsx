@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HandleFoodTypes } from "../../../scripts/FoodPicker";
 import { handleProducts } from "../../../scripts/GetterMenu";
-import NextStep from "../../NextStep";
+import StepButton from "../../StepButton";
 import styles from "./Step0.module.css";
 import { FoodCard } from "../FoodCard/FoodCard";
 import CartChild from "../CartChild";
@@ -46,12 +46,14 @@ const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) 
           <CartChild key={index} food={food} remove={RemoveFromFoodMenu} />
         ))}
       </div>
-      <NextStep
+      <StepButton
         isDisabled={myCart.length == 0}
         onClick={() => {
           if (myCart.length > 0) setStep(1);
         }}
-      />
+      >
+        Continuar
+      </StepButton>
     </div>
   );
 };

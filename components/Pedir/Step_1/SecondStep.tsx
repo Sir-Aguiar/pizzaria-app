@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { HandleCEP } from "../../../scripts/HandleOrderFormulary";
+import StepButton from "../../StepButton";
 import styles from "./Step1.module.css";
-
 const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
   const [cartCost, setCartCost] = useState<number>(0);
   const [transportCost, setTransportCost] = useState<number>(0);
@@ -91,17 +91,25 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         <h1>Frete: R${transportCost}</h1>
         <h1>Total a pagar: R${cartCost + transportCost}</h1>
       </div>
-      <div className="nextStep">
-        <button
+      <div className={styles.ctaContainer}>
+        <StepButton
+          onClick={() => {
+            setStep(0);
+          }}
+          secondary
+        >
+          Retornar
+        </StepButton>
+        <StepButton
           type="submit"
-          form="userForm"
+          form={{ form: "userForm" }}
           onClick={() => {
             HandleFormulary(myCart);
+            setStep(2);
           }}
         >
-          {" "}
-          Prosseguir{" "}
-        </button>
+          Continuar
+        </StepButton>
       </div>
     </div>
   );

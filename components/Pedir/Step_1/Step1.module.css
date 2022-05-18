@@ -58,13 +58,13 @@
   @apply flex items-center justify-center gap-2;
 }
 .userCart {
-  @apply flex flex-col max-h-[150px] max-w-[420px] mx-auto overflow-y-auto my-2 p-1;
+  @apply flex flex-col max-h-[150px] border-b-2 border-b-neutral-700 max-w-[420px] mx-auto overflow-y-auto my-2 p-1;
 }
 .userCartTitle {
   @apply text-center text-xl;
 }
 .product {
-  @apply my-1 p-1 border-b-2 border-b-neutral-700 flex justify-around items-center;
+  @apply my-1 p-1  flex justify-around items-center;
 }
 .product p {
   @apply flex-1 text-center;
@@ -74,4 +74,7 @@
 }
 .fullPrice h1 {
   @apply text-lg;
+}
+.ctaContainer {
+  @apply flex my-3;
 }

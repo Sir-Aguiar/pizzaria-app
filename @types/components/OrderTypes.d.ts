@@ -19,7 +19,13 @@ declare type OrderSecondStepProps = {
   myCart: MenuItem[];
   setStep: React.Dispatch<React.SetStateAction<number>>;
 };
+interface NextStepForm {
+  form: string;
+}
 declare type NextStepProps = {
   onClick: () => void;
   isDisabled?: boolean;
+  type?: "button" | "submit";
+  form?: NextStepForm;
+  secondary?: boolean;
 };
