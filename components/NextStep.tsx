@@ -1,9 +1,11 @@
 import React from "react";
 
-const NextStep: React.FC<NextStepProps> = ({ onClick }) => {
+const NextStep: React.FC<NextStepProps> = ({ onClick, isDisabled }) => {
   return (
     <div className="nextStep">
-      <button onClick={onClick}>Continuar</button>
+      <button onClick={onClick} className={`${isDisabled ? "disable" : ""}`}>
+        Continuar
+      </button>
     </div>
   );
 };

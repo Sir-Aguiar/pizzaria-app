@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "./Slider/Slider";
 import styles from "./OrderTutorial.module.css";
-import * as Cards from "../../../tutorial.json";
+import Cards from "../../../tutorial.json";
 const OrderTutorial: React.FC<OrderTutorialProps> = () => {
   return (
     <div className={styles.tutorialComponent}>

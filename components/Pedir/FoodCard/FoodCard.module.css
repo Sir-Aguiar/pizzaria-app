@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 .foodCard {
-  @apply flex min-h-[90px] min-w-full h-[90px] max-h-[95px] shadow-price my-[6px];
+  @apply flex min-h-[90px] min-w-full h-[90px] rounded-sm max-h-[95px] shadow-food-card my-[6px];
 }
 .infoSide {
   @apply flex-1 flex flex-col items-center justify-evenly;

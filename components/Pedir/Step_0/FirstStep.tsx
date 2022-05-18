@@ -18,8 +18,7 @@ const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) 
     handleProducts(foodType).then((res) => {
       setFoodMenu(res);
     });
-    console.log(myCart);
-  }, [foodType, myCart]);
+  }, [foodType]);
   return (
     <div className={`${styles.foodContainer}`}>
       <div className={`${styles.foodPicker}`}>
@@ -48,6 +47,7 @@ const FirstStep: React.FC<OrderFirstStepProps> = ({ myCart, setCart, setStep }) 
         ))}
       </div>
       <NextStep
+        isDisabled={myCart.length == 0}
         onClick={() => {
           if (myCart.length > 0) setStep(1);
         }}

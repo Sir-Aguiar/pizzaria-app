@@ -21,4 +21,5 @@ declare type OrderSecondStepProps = {
 };
 declare type NextStepProps = {
   onClick: () => void;
+  isDisabled?: boolean;
 };

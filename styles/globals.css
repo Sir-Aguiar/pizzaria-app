@@ -15,3 +15,7 @@
 .nextStep button {
   @apply bg-green-400 p-2 px-6 text-gray-700 border-2 border-emerald-500 text-[17px] rounded-full mx-auto flex items-center hover:brightness-105 transition-all hover:shadow-price shadow-emerald-300 duration-300;
 }
+.nextStep button.disable {
+  @apply grayscale-[60] cursor-not-allowed;
+}
+
