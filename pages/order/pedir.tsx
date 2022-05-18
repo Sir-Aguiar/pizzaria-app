@@ -19,7 +19,7 @@ const Pedir: NextPage<RootOrderProps> = () => {
         <IoIosArrowForward className={styles.orderPr} />
         <span className={`${styles.orderProgress}`}>Informações</span>
         <IoIosArrowForward className={styles.orderPr} />
-        <span className={`${styles.orderProgress}`}>Finalizar</span>
+        <span className={`${styles.orderProgress}`}>Validar</span>
       </header>
       {orderStep === 0 && <FirstStep setStep={setOrderStep} myCart={myCart} setCart={setCart} />}
       {orderStep === 1 && <SecondStep setStep={setOrderStep} myCart={myCart} />}

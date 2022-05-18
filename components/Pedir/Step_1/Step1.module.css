@@ -10,7 +10,7 @@
   @apply flex flex-col p-2 flex-1 max-w-[400px] mx-auto gap-2 min-h-[320px];
 }
 .formulary input {
-  @apply p-1 border-b-[1.5px] border-neutral-800 rounded-sm outline-none focus-within:border-rose-600 transition-all duration-200;
+  @apply p-1 border-b-[1.5px] border-neutral-800 rounded-sm outline-none focus-within:border-rose-600 transition-all duration-200 bg-transparent;
 }
 .input_group1 {
   @apply flex gap-2 w-full;
