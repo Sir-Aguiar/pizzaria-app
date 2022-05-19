@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { HandleCEP } from "../../../scripts/HandleOrderFormulary";
@@ -6,19 +7,32 @@ import styles from "./Step1.module.css";
 const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
   const [cartCost, setCartCost] = useState<number>(0);
   const [transportCost, setTransportCost] = useState<number>(0);
-  const [paymentMethod, setPaymentMethod] = useState<string>("Card");
-  const HandleFormulary = (products: MenuItem[]) => {
+  const [paymentMethod, setPaymentMethod] = useState<string>("Cartão");
+  const HandleFormulary = async (products: MenuItem[]) => {
     const UserData = {
-      name: document.getElementById("name") as HTMLInputElement,
+      client: document.getElementById("name") as HTMLInputElement,
       phone: document.getElementById("tel") as HTMLInputElement,
-      reference: document.getElementById("reference") as HTMLInputElement,
       change: document.getElementById("change") as HTMLInputElement,
       location: {
+        reference: document.getElementById("reference") as HTMLInputElement,
         bairro: document.getElementById("bairro") as HTMLInputElement,
         rua: document.getElementById("rua") as HTMLInputElement,
         casa: document.getElementById("casa") as HTMLInputElement,
       },
+      items: products,
     };
+    return axios.post("http://localhost:3333/new-order", {
+      client: UserData.client.value,
+      items: UserData.items,
+      location: {
+        bairro: UserData.location.bairro.value,
+        casa: UserData.location.casa.value,
+        reference: UserData.location.reference.value,
+        rua: UserData.location.rua.value,
+      },
+      phone: UserData.phone.value,
+      payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,
+    });
   };
 
   useEffect(() => {
@@ -64,8 +78,8 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
           <div className={styles.subgroup_4}>
             <h1>Método de pagamento</h1>
             <select onChange={(e) => setPaymentMethod(e.target.value)}>
-              <option value="Card">Cartão de débito/crédito</option>
-              <option value="Cash">Dinheiro</option>
+              <option value="Cartão">Cartão de débito/crédito</option>
+              <option value="Dinheiro">Dinheiro</option>
             </select>
             {paymentMethod == "Cash" && (
               <div className={styles.change}>
@@ -104,7 +118,9 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
           type="submit"
           form={{ form: "userForm" }}
           onClick={() => {
-            HandleFormulary(myCart);
+            HandleFormulary(myCart).then((res) => {
+              console.log(res);
+            });
             setStep(2);
           }}
         >

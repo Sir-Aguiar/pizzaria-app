@@ -29,3 +29,15 @@ declare type NextStepProps = {
   form?: NextStepForm;
   secondary?: boolean;
 };
+declare interface IUserData {
+  client:HTMLInputElement;
+  phone:HTMLInputElement;
+  change:HTMLInputElement
+  items:MenuItem[];
+  location: {
+    rua:HTMLInputElement;
+    casa:HTMLInputElement;
+    bairro:HTMLInputElement;
+    reference:HTMLInputElement;
+  }
+}
