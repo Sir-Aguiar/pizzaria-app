@@ -2,5 +2,5 @@
 @tailwind utilities;
 
 .order {
-  @apply flex items-center gap-3 justify-center p-4 py-3 bg-rose-700 rounded-full text-xl text-slate-300 w-[60%]  relative shadow-order-cta max-w-[280px] hover:brightness-110 transition-all duration-200;
+  @apply flex items-center gap-3 justify-center p-4 py-3 bg-rose-700 rounded-full text-xl text-slate-300 w-[60%]  relative shadow-order-cta max-w-[280px] hover:brightness-110 transition-all duration-200 my-4;
 }

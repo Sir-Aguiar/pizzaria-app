@@ -1,7 +1,7 @@
 @tailwind components;
 @tailwind utilities;
 .landingZone {
-  @apply h-full max-h-[900px] lg:h-[70%] xl:h-[80%] min-h-[650px] xl:min-h-[400px] lg:min-h-[400px]
+  @apply h-full max-h-[800px] min-h-[650px] xl:min-h-[400px] lg:min-h-[400px]
   w-full 
   flex flex-col lg:flex-row xl:flex-row justify-around items-center
   p-1 
@@ -10,14 +10,14 @@
 .txtSec {
   @apply flex flex-col items-center text-center lg:text-left xl:text-left flex-1 gap-2;
 }
+.txtSec h1 {
+  @apply text-xl xl:text-2xl font-Plex;
+}
 
 .iconSec {
-  @apply flex-1 max-h-[400px] max-w-[90%] ml-auto;
+  @apply flex-1 max-h-[400px] max-w-[90%] ml-auto ;
 }
 
-.txtSec h1 {
-  @apply text-xl font-Plex;
-}
 .txtSec p {
   @apply text-base my-2 px-1;
 }
