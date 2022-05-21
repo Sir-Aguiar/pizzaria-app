@@ -9,5 +9,5 @@
   @apply text-center flex-1 my-1;
 }
 .remove {
-  @apply mx-3 fill-red-600;
+  @apply mx-3 fill-red-600 cursor-pointer;
 }
