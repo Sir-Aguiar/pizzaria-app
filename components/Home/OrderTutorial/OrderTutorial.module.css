@@ -2,9 +2,9 @@
 @tailwind utilities;
 
 .tutorialComponent {
-  @apply h-full w-full max-h-[525px] xl:max-h-[600px] bg-[#de4653] flex flex-col items-center justify-around;
+  @apply h-full w-full max-h-[525px] xl:max-h-[600px] bg-order-tutorial flex flex-col items-center justify-around;
 }
 
 .mainTitle {
-  @apply text-center text-3xl my-1 font-Plex text-slate-300 ;
+  @apply text-center text-3xl my-1 font-Plex text-slate-300;
 }

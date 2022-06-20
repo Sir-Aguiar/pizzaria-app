@@ -5,6 +5,8 @@ declare interface Card {
   alt: string;
 }
 declare type CarouselProps = {
-  Card: Step[];
-
-}
+  Card: Card[];
+};
+declare type CardProps = {
+  card: Card;
+};

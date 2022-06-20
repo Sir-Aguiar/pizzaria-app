@@ -2,5 +2,6 @@
 @tailwind utilities;
 
 .mainContainer {
-  @apply flex flex-col h-[240vh] min-h-[1300px] bg-slate-200 mt-[60px] overflow-auto;
+  @apply flex flex-col h-[240vh] min-h-[1300px] bg-default mt-[60px] overflow-auto;
+
 }
