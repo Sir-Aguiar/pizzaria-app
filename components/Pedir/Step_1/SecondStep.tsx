@@ -21,7 +21,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
       },
       items: products,
     };
-    return axios.post("http://localhost:3333/new-order", {
+    const response = await axios.post("http://localhost:3333/new-order", {
       client: UserData.client.value,
       items: UserData.items,
       location: {
@@ -33,6 +33,8 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
       phone: UserData.phone.value,
       payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,
     });
+    setStep(2);
+    return response;
   };
 
   useEffect(() => {
@@ -45,7 +47,14 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
   return (
     <div className={styles.mainContainer}>
       <h1 className={styles.welcomeText}>Estamos quase lá!</h1>
-      <form className={styles.formulary} id="userForm" onSubmit={(e) => e.preventDefault()}>
+      <form
+        className={styles.formulary}
+        id="userForm"
+        onSubmit={(e) => {
+          e.preventDefault();
+          HandleFormulary(myCart).then((res) => console.log(res));
+        }}
+      >
         <div className={styles.input_group1}>
           <input type="text" name="name" id="name" placeholder="Nome" required />
           <input
@@ -81,7 +90,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
               <option value="Cartão">Cartão de débito/crédito</option>
               <option value="Dinheiro">Dinheiro</option>
             </select>
-            {paymentMethod == "Cash" && (
+            {paymentMethod == "Dinheiro" && (
               <div className={styles.change}>
                 <label htmlFor="change">Troco para R$</label>
                 <input type="number" name="change" id="change" required />
@@ -114,16 +123,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         >
           Retornar
         </StepButton>
-        <StepButton
-          type="submit"
-          form={{ form: "userForm" }}
-          onClick={() => {
-            HandleFormulary(myCart).then((res) => {
-              console.log(res);
-            });
-            setStep(2);
-          }}
-        >
+        <StepButton type="submit" form={{ form: "userForm" }} onClick={() => {}}>
           Continuar
         </StepButton>
       </div>
