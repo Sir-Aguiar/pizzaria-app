@@ -21,20 +21,24 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
       },
       items: products,
     };
-    const response = await axios.post("http://localhost:3333/new-order", {
-      client: UserData.client.value,
-      items: UserData.items,
-      location: {
-        bairro: UserData.location.bairro.value,
-        casa: UserData.location.casa.value,
-        reference: UserData.location.reference.value,
-        rua: UserData.location.rua.value,
-      },
-      phone: UserData.phone.value,
-      payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,
-    });
-    setStep(2);
-    return response;
+    try {
+      const response = await axios.post("http://localhost:3333/new-order", {
+        client: UserData.client.value,
+        items: UserData.items,
+        location: {
+          bairro: UserData.location.bairro.value,
+          casa: UserData.location.casa.value,
+          reference: UserData.location.reference.value,
+          rua: UserData.location.rua.value,
+        },
+        phone: UserData.phone.value,
+        payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,
+      });
+      setStep(2);
+      return response.data;
+    } catch (e: any) {
+      return e.message;
+    }
   };
 
   useEffect(() => {
@@ -52,7 +56,9 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         id="userForm"
         onSubmit={(e) => {
           e.preventDefault();
-          HandleFormulary(myCart).then((res) => console.log(res));
+          HandleFormulary(myCart).then((res) => {
+            console.log(res);
+          });
         }}
       >
         <div className={styles.input_group1}>
