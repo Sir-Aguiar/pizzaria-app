@@ -1,0 +1,15 @@
+.mainContainer {
+  @apply min-h-[600px] w-full h-[80vh] overflow-hidden p-5 mt-[60px] flex justify-center items-center
+}
+.form {
+  @apply shadow-login gap-10 w-full max-w-[350px] flex flex-col justify-around items-center p-4 rounded-sm
+}
+.form h1 {
+  @apply text-xl font-Plex text-center
+}
+.form input {
+  @apply bg-transparent border-b-[1px] border-b-rose-500 outline-none text-black w-full p-2 focus-within:border-b-indigo-600 transition-all
+}
+.submiter {
+  @apply p-2 bg-rose-600 rounded-[3px] text-lg transition-all w-full hover:brightness-90
+}

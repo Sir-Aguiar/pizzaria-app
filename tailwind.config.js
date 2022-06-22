@@ -44,7 +44,8 @@ module.exports = {
         'price': '2px 2px 3px rgb(60,60,60,.4), -2px -1px 3px rgb(60,60,60,.4)',
         'tutorial-card': 'rgba(200,100,100, 0.3) 0px 1px 2px 0px, rgba(200,100,100, 0.15) 0px 1px 3px 1px',
         "food-card": "1.3px 2.5px 3px rgb(60,60,60,.38), -1.2px -1.4px 3px rgb(60,60,60, .38)",
-        "order-cta": "3px 3px 6px rgb(222,16,177,.5), -3px 3px 6px rgb(36,58,201,.8)"
+        "order-cta": "3px 3px 6px rgb(222,16,177,.5), -3px 3px 6px rgb(36,58,201,.8)",
+        "login":"1px 1px 2px rgb(60,60,60,.4)"
       }
     },
   },
