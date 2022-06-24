@@ -1,10 +1,11 @@
 import axios from "axios";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { LoginContext } from "../../contexts/Loggin/LogginContext";
 import styles from "../../styles/adm.module.css";
 
 const Formulary: React.FC<AdmFormularyProps> = () => {
   const { logIn } = useContext(LoginContext);
+  const [loading, setLoading] = useState(false);
   const HandleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const name = document.getElementById("name") as HTMLInputElement;
@@ -16,8 +17,9 @@ const Formulary: React.FC<AdmFormularyProps> = () => {
         },
       })
       .then((res) => {
-        console.log(res);
-        if (res.status === 200) logIn();
+        if (res.status === 200) {
+          logIn();
+        }
       })
       .catch((e) => {
         alert("Acesso não autorizado");
