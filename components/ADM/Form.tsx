@@ -4,7 +4,7 @@ import { LoginContext } from "../../contexts/Loggin/LogginContext";
 import styles from "../../styles/adm.module.css";
 
 const Formulary: React.FC<AdmFormularyProps> = () => {
-  const { logIn } = useContext(LoginContext);
+  const { logIn, setEmployeeCredentials } = useContext(LoginContext);
   const [loading, setLoading] = useState(false);
   const HandleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,6 +19,7 @@ const Formulary: React.FC<AdmFormularyProps> = () => {
       .then((res) => {
         if (res.status === 200) {
           logIn();
+          setEmployeeCredentials({ id: id.value, name: name.value, store: "TestePizzariaMenu" });
         }
       })
       .catch((e) => {
