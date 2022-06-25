@@ -8,5 +8,5 @@
   @apply outline-none border-[1px] border-slate-800 p-1 mx-3;
 }
 .ordersSection {
-  @apply w-full h-full;
+  @apply w-full h-full flex gap-2 p-2 flex-wrap;
 }

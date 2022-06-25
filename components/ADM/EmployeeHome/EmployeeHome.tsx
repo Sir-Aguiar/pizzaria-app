@@ -6,7 +6,7 @@ import styles from "./EmployeeHome.module.css";
 
 const EmployeeHome: React.FC = () => {
   const { employee } = useContext(LoginContext);
-  const [currentMenu, setMenu] = useState<string>("Pendentes");
+  const [currentMenu, setMenu] = useState<number>(1);
   const [orders, setOrders] = useState<Order[]>([]);
   useEffect(() => {
     axios
@@ -18,7 +18,6 @@ const EmployeeHome: React.FC = () => {
         },
       })
       .then((res) => {
-        console.log(res);
         if (res.status == 200) {
           setOrders(res.data.orders);
         }
@@ -30,18 +29,20 @@ const EmployeeHome: React.FC = () => {
         Exibir pedidos
         <select
           onChange={(e) => {
-            setMenu(e.target.value);
+            setMenu(Number(e.target.value));
           }}
         >
-          <option>Pendentes</option>
-          <option>Aprovados</option>
-          <option>Em entrega</option>
+          <option value="1">Pendentes</option>
+          <option value="0">Aprovados</option>
+          <option value="2">Em entrega</option>
         </select>
       </header>
       <section className={styles.ordersSection}>
-        {orders.map((order, index) => (
-          <OrderCard key={index} info={order} />
-        ))}
+        {orders
+          .filter((order) => order.status === currentMenu)
+          .map((order, index) => (
+            <OrderCard key={index} info={order} />
+          ))}
       </section>
     </div>
   );

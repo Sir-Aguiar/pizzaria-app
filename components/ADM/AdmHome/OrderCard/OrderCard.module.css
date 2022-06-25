@@ -1,0 +1,9 @@
+.orderCard {
+  @apply bg-red-300 p-2 min-h-[250px] max-h-[260px] min-w-[200px] max-w-[250px];
+}
+.client {
+  @apply text-center 
+}
+.priceTag {
+  @apply text-center
+}

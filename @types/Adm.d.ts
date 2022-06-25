@@ -7,6 +7,7 @@ declare interface Order {
   location:Locale;
   items:ClientProduct[];
   payment:string;
+  status:number;
 }
 declare type OrderCardProps = {
   info: Order;
