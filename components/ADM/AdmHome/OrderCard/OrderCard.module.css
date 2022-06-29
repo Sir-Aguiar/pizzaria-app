@@ -1,9 +1,15 @@
 .orderCard {
-  @apply bg-red-300 p-2 min-h-[250px] max-h-[260px] min-w-[200px] max-w-[250px];
+  @apply min-w-[280px] w-[280px] min-h-[100px] h-[100px] bg-[#F1F5F9] rounded-[4px] p-2;
 }
-.client {
-  @apply text-center 
+.cardHeader {
+  @apply grid grid-rows-2 grid-cols-2 font-Plex text-[15px] gap-1;
 }
-.priceTag {
-  @apply text-center
+.name {
+  @apply col-span-2;
+}
+.cardFooter {
+  @apply mt-2 grid grid-cols-2;
+}
+.price {
+  @apply text-right
 }
