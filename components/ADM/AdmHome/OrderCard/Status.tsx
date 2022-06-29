@@ -8,5 +8,6 @@ export const Status = styled.div<StatusProps>`
   border-radius: 50%;
   background: ${(props) => props.status};
   margin-left: auto;
+  grid-auto-columns: auto;
   cursor: pointer;
 `;
