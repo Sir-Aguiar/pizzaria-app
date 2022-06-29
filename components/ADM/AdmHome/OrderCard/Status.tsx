@@ -8,4 +8,5 @@ export const Status = styled.div<StatusProps>`
   border-radius: 50%;
   background: ${(props) => props.status};
   margin-left: auto;
+  cursor: pointer;
 `;

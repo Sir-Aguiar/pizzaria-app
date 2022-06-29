@@ -18,6 +18,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         bairro: document.getElementById("bairro") as HTMLInputElement,
         rua: document.getElementById("rua") as HTMLInputElement,
         casa: document.getElementById("casa") as HTMLInputElement,
+        cep: document.getElementById("cep") as HTMLInputElement,
       },
       items: products,
     };
@@ -30,6 +31,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
           casa: UserData.location.casa.value,
           reference: UserData.location.reference.value,
           rua: UserData.location.rua.value,
+          cep: UserData.location.cep,
         },
         phone: UserData.phone.value,
         payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,

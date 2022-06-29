@@ -1,5 +1,5 @@
 .orderCard {
-  @apply min-w-[280px] w-[280px] min-h-[100px] h-[100px] bg-[#F1F5F9] rounded-[4px] p-2;
+  @apply flex flex-col gap-2 min-w-[280px] w-[280px] min-h-[100px] max-h-[450px] bg-[#F1F5F9] rounded-[4px] p-2;
 }
 .cardHeader {
   @apply grid grid-rows-2 grid-cols-2 font-Plex text-[15px] gap-1;
@@ -11,5 +11,31 @@
   @apply mt-2 grid grid-cols-2;
 }
 .price {
-  @apply text-right
+  @apply text-right text-[16px] font-Poppins;
+}
+.cardBody {
+  @apply flex flex-col flex-1;
+}
+.cep {
+  @apply text-center my-1;
+}
+.bairro,
+.rua,
+.casa {
+  @apply text-left;
+}
+.reference {
+  @apply flex-1 p-2 text-center;
+}
+.itens {
+  @apply flex-1 border-2 border-[#433e3e6e] rounded-[4px] flex flex-col;
+}
+.phone {
+  @apply text-center
+}
+.itens {
+  @apply flex flex-col gap-1 justify-center items-center
+}
+.item {
+  @apply text-center
 }

@@ -29,6 +29,7 @@ module.exports = {
         'OSans': ["Open Sans", "sans-serif"],
         'NSans': ["Noto Sans", "sans-serif"],
         'PSans': ["Product Sans", "sans-serif"],
+        'Poppins': ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         'lgimageShowcase': "url('/combo-bigbanner.png')",
