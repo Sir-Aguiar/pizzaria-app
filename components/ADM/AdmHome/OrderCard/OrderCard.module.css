@@ -13,7 +13,9 @@
 .orderCard.active .cardBody {
   @apply max-h-[340px] flex-1;
 }
-
+.orderCard.active .narrow svg{
+  @apply rotate-180
+}
 .cardHeader {
   @apply grid grid-rows-2 grid-cols-2 font-Plex text-[15px] gap-1;
 }
@@ -49,4 +51,11 @@
 }
 .item {
   @apply text-center;
+}
+.cardStatus {
+  @apply flex gap-2 items-center
+}
+
+.narrow svg {
+  @apply cursor-pointer transition-all duration-300
 }

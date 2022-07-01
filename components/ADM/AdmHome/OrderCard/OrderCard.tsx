@@ -14,7 +14,12 @@ const OrderCard: React.FC<OrderCardProps> = ({ info }) => {
     <div className={styles.orderCard}>
       <header className={styles.cardHeader}>
         <span className={styles.date}>29/06 - 12:12</span>
-        <Status status={statusColor} className={styles.status} onClick={(e) => ToggleCard(e)} />
+        <div className={styles.cardStatus}>
+          <Status status={statusColor} className={styles.status} />
+          <div onClick={(e) => ToggleCard(e)} className={styles.narrow}>
+            <MdArrowDropDown size={20}/>
+          </div>
+        </div>
         <span className={styles.name}>{info.client}</span>
       </header>
       <main className={styles.cardBody}>

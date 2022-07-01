@@ -23,7 +23,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
       items: products,
     };
     try {
-      const response = await axios.post("http://localhost:3333/new-order", {
+      const response = await axios.post("https://pizzariabackend.herokuapp.com/new-order", {
         client: UserData.client.value,
         items: UserData.items,
         location: {
