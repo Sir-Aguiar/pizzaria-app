@@ -17,8 +17,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         reference: document.getElementById("reference") as HTMLInputElement,
         bairro: document.getElementById("bairro") as HTMLInputElement,
         rua: document.getElementById("rua") as HTMLInputElement,
-        casa: document.getElementById("casa") as HTMLInputElement,
-        cep: document.getElementById("cep") as HTMLInputElement,
+        casa: document.getElementById("casa") as HTMLInputElement
       },
       items: products,
     };
@@ -31,7 +30,6 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
           casa: UserData.location.casa.value,
           reference: UserData.location.reference.value,
           rua: UserData.location.rua.value,
-          cep: UserData.location.cep,
         },
         phone: UserData.phone.value,
         payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,
@@ -58,9 +56,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         id="userForm"
         onSubmit={(e) => {
           e.preventDefault();
-          HandleFormulary(myCart).then((res) => {
-            console.log(res);
-          });
+          HandleFormulary(myCart)
         }}
       >
         <div className={styles.input_group1}>
