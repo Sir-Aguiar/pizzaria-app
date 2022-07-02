@@ -1,5 +1,5 @@
 .orderCard {
-  @apply flex flex-col gap-[2px] min-w-[280px] w-[280px] min-h-[100px] max-h-[100px] bg-[#F1F5F9] rounded-[4px] p-2 transition-all duration-500;
+  @apply flex flex-col gap-[2px] min-w-[280px] w-[280px] min-h-[100px] max-h-[100px] bg-[#F1F5F9] rounded-[4px] p-2 transition-all duration-500 relative ;
 }
 .orderCard.active .dropdown{
   @apply rotate-180
