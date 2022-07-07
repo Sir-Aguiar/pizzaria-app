@@ -32,8 +32,8 @@ const OrderCard: React.FC<OrderCardProps> = ({ info }) => {
         </div>
         <h1 className={styles.cep}>CEP</h1>
         <h2 className={styles.bairro}>{info.location.bairro}</h2>
-        <h2 className={styles.rua}>{info.location.rua}</h2>
-        <h3 className={styles.casa}>{info.location.casa}</h3>
+        <h2 className={styles.rua}>{info.location.address}</h2>
+        <h3 className={styles.casa}>N. {info.location.casa}</h3>
         <p className={styles.reference}>{info.location.reference}</p>
         <p className={styles.phone}> (65) {info.phone}</p>
       </main>

@@ -14,7 +14,7 @@ declare type OrderCardProps = {
 };
 declare interface Locale {
   bairro: string;
-  rua: string;
+  address: string;
   casa: string;
   reference: string;
 }

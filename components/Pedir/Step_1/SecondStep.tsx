@@ -16,7 +16,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
       location: {
         reference: document.getElementById("reference") as HTMLInputElement,
         bairro: document.getElementById("bairro") as HTMLInputElement,
-        rua: document.getElementById("rua") as HTMLInputElement,
+        address: document.getElementById("address") as HTMLInputElement,
         casa: document.getElementById("casa") as HTMLInputElement
       },
       items: products,
@@ -29,7 +29,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
           bairro: UserData.location.bairro.value,
           casa: UserData.location.casa.value,
           reference: UserData.location.reference.value,
-          rua: UserData.location.rua.value,
+          address: UserData.location.address.value,
         },
         phone: UserData.phone.value,
         payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,
@@ -75,7 +75,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
             <input type="text" name="bairro" id="bairro" placeholder="Bairro" required />
           </div>
           <div className={styles.subgroup_2}>
-            <input type="text" name="rua" id="rua" placeholder="Rua" required />
+            <input type="text" name="address" id="address" placeholder="Endereço: Quadra 30 ou Rua XX" required />
             <input type="number" name="casa" id="casa" placeholder="Casa" required />
           </div>
           <div className={styles.subgroup_3}>
