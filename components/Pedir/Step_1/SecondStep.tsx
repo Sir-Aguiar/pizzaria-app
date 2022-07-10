@@ -17,11 +17,13 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         reference: document.getElementById("reference") as HTMLInputElement,
         bairro: document.getElementById("bairro") as HTMLInputElement,
         address: document.getElementById("address") as HTMLInputElement,
-        casa: document.getElementById("casa") as HTMLInputElement
+        casa: document.getElementById("casa") as HTMLInputElement,
+        cep: document.getElementById("cep") as HTMLInputElement,
       },
       items: products,
     };
     try {
+      console.log(UserData);
       const response = await axios.post("https://pizzariabackend.herokuapp.com/new-order", {
         client: UserData.client.value,
         items: UserData.items,
@@ -30,6 +32,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
           casa: UserData.location.casa.value,
           reference: UserData.location.reference.value,
           address: UserData.location.address.value,
+          cep: UserData.location.cep.value,
         },
         phone: UserData.phone.value,
         payment: `${paymentMethod === "Cartão" ? paymentMethod : `Troco para R$ ${UserData.change.value}`}`,
@@ -56,7 +59,7 @@ const SecondStep: React.FC<OrderSecondStepProps> = ({ myCart, setStep }) => {
         id="userForm"
         onSubmit={(e) => {
           e.preventDefault();
-          HandleFormulary(myCart)
+          HandleFormulary(myCart);
         }}
       >
         <div className={styles.input_group1}>

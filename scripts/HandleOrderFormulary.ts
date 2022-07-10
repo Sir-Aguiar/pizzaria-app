@@ -8,14 +8,15 @@ const OrderAPI = axios.create({
 
 const HandleCEP = async (cep: string) => {
   const bairro = document.getElementById("bairro") as HTMLInputElement;
-  const rua = document.getElementById("rua") as HTMLInputElement;
+  const address = document.getElementById("address") as HTMLInputElement;
   CEPAPI.get(`${cep}/json`)
     .then((res) => {
       if (res.data.erro) {
         return;
       }
       bairro.value = res.data.bairro;
-      rua.value = res.data.logradouro;
+      address.value = res.data.logradouro;
+      console.log(res.data)
     })
     .catch((e) => {
       console.log(e);
