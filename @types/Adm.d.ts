@@ -17,6 +17,7 @@ declare interface Locale {
   address: string;
   casa: string;
   reference: string;
+  cep:string;
 }
 declare interface ClientProduct {
   _id: number;
