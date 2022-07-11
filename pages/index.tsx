@@ -6,12 +6,13 @@ import styles from "../styles/HomePage.module.css";
 import LandingZone from "../components/Home/LandingZone/LandingZone";
 import OrderTutorial from "../components/Home/OrderTutorial/OrderTutorial";
 import About from "../components/Home/About/About";
+import ClientOrders from "../components/Home/Orders/ClientOrders";
 const HomePage: NextPage = () => {
   return (
     <main className={`${styles.mainContainer}`}>
       <LandingZone />
       <OrderTutorial />
-      <About />
+      <ClientOrders />
     </main>
   );
 };

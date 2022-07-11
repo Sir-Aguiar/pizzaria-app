@@ -1,0 +1,10 @@
+.clientOrders {
+  @apply h-full w-full flex flex-col items-center p-2;
+}
+.mainTitle {
+  @apply text-center text-lg font-Poppins font-medium relative after:inline-block after:h-[10px] after:w-[10px]  after:translate-x-1 after:bg-order-tutorial after:rounded-full before:inline-block before:h-[10px] before:w-[10px]  before:-translate-x-1 before:bg-order-tutorial before:rounded-full;
+}
+.codeInput {
+  @apply bg-transparent border-b-[2px] border-b-order-tutorial w-[250px] text-sm
+  my-3 p-1 outline-none
+}
