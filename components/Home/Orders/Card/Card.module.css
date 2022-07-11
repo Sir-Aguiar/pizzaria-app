@@ -1,0 +1,50 @@
+.orderCard {
+  @apply flex flex-col w-[240px] h-[220px] bg-[#CC0E31] bg-opacity-90 rounded-[25px] text-white font-Poppins justify-between p-3;
+}
+.sections {
+  @apply w-full h-[55%] flex items-center justify-center overflow-hidden p-1 relative;
+}
+.section {
+  @apply h-[50px] w-[50px] bg-white bg-opacity-30 mx-3 rounded-[10px];
+  transition: transform 800ms;
+}
+.section.inactive {
+  transform: translateY(200%);
+  transition: transform 500ms;
+}
+.section.active {
+  animation-name: Activator;
+  animation-timing-function: ease;
+  animation-delay: 400ms;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.clientName {
+  @apply text-sm;
+}
+.method {
+  @apply text-[12px] font-medium text-center;
+}
+.price {
+  @apply text-[16px] font-semibold text-center;
+}
+.subPrice {
+  @apply text-[14px];
+}
+
+@keyframes Activator {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+
+  100% {
+    position: absolute;
+
+    width: 95%;
+    height: 90%;
+    margin: 0;
+  }
+}

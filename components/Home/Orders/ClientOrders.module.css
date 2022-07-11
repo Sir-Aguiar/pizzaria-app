@@ -6,5 +6,11 @@
 }
 .codeInput {
   @apply bg-transparent border-b-[2px] border-b-order-tutorial w-[250px] text-sm
-  my-3 p-1 outline-none
+  my-3 p-1 px-5 outline-none;
+}
+.inputContainer {
+  @apply flex items-center;
+}
+.search {
+  @apply relative left-4 opacity-50;
 }

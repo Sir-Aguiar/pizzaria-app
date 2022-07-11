@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import styles from "./ClientOrders.module.css";
-
+import { IoMdSearch } from "react-icons/io";
+import Card from "./Card/Card";
 const ClientOrders: React.FC = () => {
   const [clientOrder, setClientOrder] = useState<Order>();
   const HandleOrderCode = (code: string) => {
@@ -19,15 +20,21 @@ const ClientOrders: React.FC = () => {
   return (
     <div className={styles.clientOrders}>
       <h1 className={styles.mainTitle}>Acompanhe seu pedido</h1>
-      <input
-        type="number"
-        id="orderCode"
-        className={styles.codeInput}
-        placeholder="Insira aqui o código do pedido"
-        onChange={(e) => {
-          HandleOrderCode(e.target.value);
-        }}
-      />
+      <div className={styles.inputContainer}>
+        <label htmlFor="orderCode">
+          <IoMdSearch className={styles.search} />
+        </label>
+        <input
+          type="number"
+          id="orderCode"
+          className={styles.codeInput}
+          placeholder="Insira aqui o código do pedido"
+          onChange={(e) => {
+            HandleOrderCode(e.target.value);
+          }}
+        />
+      </div>
+      <Card/>
     </div>
   );
 };
