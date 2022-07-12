@@ -5,7 +5,9 @@ const Card: React.FC = () => {
   const Handler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const sections = document.querySelectorAll<HTMLDivElement>(`div.${styles.section}`);
     sections.forEach((sec) => {
-      
+      if (sec.classList.contains(styles.active)){
+        // fadeout animation
+      }
       if (sec === e.currentTarget) {
         e.currentTarget.classList.toggle(styles.active);
         return;
