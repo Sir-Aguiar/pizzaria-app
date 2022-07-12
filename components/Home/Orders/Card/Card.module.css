@@ -5,20 +5,18 @@
   @apply w-full h-[55%] flex items-center justify-center overflow-hidden p-1 relative;
 }
 .section {
-  @apply h-[50px] w-[50px] bg-white bg-opacity-30 mx-3 rounded-[10px];
-  transition: transform 800ms;
+  @apply h-[50px] w-[50px] relative flex bg-white bg-opacity-30  mx-3 rounded-[10px]  overflow-hidden;
+  transition: all 0.5s ease, transform 0.5s, max-width 0.7s, max-height 0.7s;
 }
-.section.inactive {
-  transform: translateY(200%);
-  transition: transform 500ms;
+
+.section.padron {
+  @apply h-[50px] w-[50px] max-h-[50px] max-w-[50px] translate-y-0;
 }
 .section.active {
-  animation-name: Activator;
-  animation-timing-function: ease;
-  animation-delay: 400ms;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+  @apply m-0 max-w-xl w-full max-h-full h-full;
+}
+.section.inactive {
+  @apply translate-y-[400px] max-w-0 max-h-0 hidden;
 }
 
 .clientName {
@@ -33,17 +31,24 @@
 .subPrice {
   @apply text-[14px];
 }
-
-@keyframes Activator {
-  0% {
-    width: 50px;
-    height: 50px;
-  }
-
-  100% {
-    position: absolute;
-    width: 100%;
-    height: 90%;
-    margin: 0;
-  }
+.case {
+  @apply w-full h-full flex  items-center justify-center   transition-transform duration-700;
+}
+.case svg {
+  @apply w-[25px] h-[25px] fill-slate-300;
+}
+.caseActive {
+  @apply translate-x-[200%] absolute;
+}
+.menu {
+  @apply block;
+}
+.address {
+  @apply block;
+}
+.more {
+  @apply block;
+}
+.content {
+  @apply flex-1 h-full bg-yellow-500;
 }
