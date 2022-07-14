@@ -20,7 +20,7 @@
 }
 
 .clientName {
-  @apply text-sm;
+  @apply text-sm mx-2 my-1;
 }
 .method {
   @apply text-[12px] font-medium text-center;
@@ -50,14 +50,23 @@
   @apply block;
 }
 .content {
-  @apply flex-1 h-full p-2 flex flex-col justify-center overflow-hidden;
+  @apply flex-1 h-full p-2 flex;
+}
+.addressContent {
+  @apply flex-col justify-center overflow-hidden;
 }
 .bairro {
-  @apply text-[15px]  my-1
+  @apply text-[15px]  my-1;
 }
 .homeAddress {
-  @apply text-[13px]
+  @apply text-[13px];
 }
 .number {
-  @apply text-[12px] text-opacity-70
+  @apply text-[12px] text-opacity-70;
+}
+.orderItem {
+  @apply my-1;
+}
+.orderItemsContent {
+  @apply flex-col items-center overflow-auto;
 }

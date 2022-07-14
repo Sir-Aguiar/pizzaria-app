@@ -3,7 +3,6 @@ import styles from "./OrderCard.module.css";
 import { Status } from "./Status";
 import { MdArrowDropDown } from "react-icons/md";
 const OrderCard: React.FC<OrderCardProps> = ({ info }) => {
-  const statusColor = info.status == 1 ? "#E02D2D" : info.status == 0 ? "#33D169" : "#EC9D26";
   const ToggleCard = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const activator = document.getElementsByClassName(`${e.currentTarget.className}`);
     const targetIndex = Array.from(activator).indexOf(e.currentTarget);
@@ -15,7 +14,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ info }) => {
       <header className={styles.cardHeader}>
         <span className={styles.date}>29/06 - 12:12</span>
         <div className={styles.cardStatus}>
-          <Status status={statusColor} className={styles.status} />
+          <Status status={info.status} className={styles.status} />
           <div onClick={(e) => ToggleCard(e)} className={styles.narrow}>
             <MdArrowDropDown size={20}/>
           </div>

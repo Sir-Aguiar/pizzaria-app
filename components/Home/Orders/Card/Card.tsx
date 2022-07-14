@@ -24,21 +24,25 @@ const Card: React.FC<ClientOrderCardProps> = ({ info }) => {
   };
   return (
     <div className={styles.orderCard}>
-      <h1 className={styles.clientName}>Felipe Aguiar</h1>
+      <h1 className={styles.clientName}>{info.client}</h1>
       <div className={styles.sections}>
         <div className={`${styles.menu} ${styles.section} ${styles.padron}`} onClick={Handler}>
           <div className={styles.case}>
             <MdOutlineMenuBook />
           </div>
-          <div className={styles.content}>
-            
+          <div className={`${styles.content} ${styles.orderItemsContent}`}>
+            {info.items.map((item, index) => (
+              <p key={index} className={styles.orderItem}>
+                {item.name}-{item.price}
+              </p>
+            ))}
           </div>
         </div>
         <div className={`${styles.address} ${styles.section} ${styles.padron}`} onClick={Handler}>
           <div className={styles.case}>
             <IoMdHome />
           </div>
-          <div className={styles.content}>
+          <div className={`${styles.content} ${styles.addressContent}`}>
             <h1 className={styles.bairro}>{info.location.bairro}</h1>
             <h2 className={styles.homeAddress}>{info.location.address}</h2>
             <span className={styles.number}>Nº{info.location.casa}</span>
@@ -48,14 +52,17 @@ const Card: React.FC<ClientOrderCardProps> = ({ info }) => {
           <div className={styles.case}>
             <IoIosMore />
           </div>
-          <div className={styles.content}></div>
+          <div className={`${styles.moreContent} ${styles.content}`}>
+            
+          </div>
         </div>
       </div>
       <div className="flex flex-col">
         <h2 className={styles.price}>
-          R$ 18<span className={styles.subPrice}>,90</span>
+          R$ {String(info.price).split(".")[0]}
+          <span className={styles.subPrice}>,{String(info.price).split(".")[1].padEnd(2, "0")}</span>
         </h2>
-        <h3 className={styles.method}>Cartão débito/crédito</h3>
+        <h3 className={styles.method}>{info.payment}</h3>
       </div>
     </div>
   );
