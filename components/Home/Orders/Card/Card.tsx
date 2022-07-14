@@ -53,7 +53,17 @@ const Card: React.FC<ClientOrderCardProps> = ({ info }) => {
             <IoIosMore />
           </div>
           <div className={`${styles.moreContent} ${styles.content}`}>
-            
+            <p className={styles.createdAt}>
+              Pedido realizado às {new Date(info.createdAt.seconds * 1000).getHours()}:
+              {new Date(info.createdAt.seconds * 1000).getMinutes()}
+            </p>
+            <h1 className={styles.status}>
+              Estado do pedido:{"   "}
+              <span className={styles.state}>
+                {info.status == 1 ? "Pendente" : info.status == 0 ? "Aprovado" : "Saiu para entrega"}
+              </span>
+            </h1>
+            <p className={styles.phone}>(65) {info.phone}</p>
           </div>
         </div>
       </div>

@@ -70,3 +70,18 @@
 .orderItemsContent {
   @apply flex-col items-center overflow-auto;
 }
+.status {
+  @apply text-[13px]
+}
+.state {
+  @apply underline underline-offset-2 decoration-indigo-600
+}
+.moreContent {
+  @apply flex-col justify-around overflow-hidden
+}
+.createdAt {
+  @apply text-[12px]
+}
+.phone {
+  @apply text-sm text-center my-1
+}
