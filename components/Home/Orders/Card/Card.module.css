@@ -1,8 +1,8 @@
 .orderCard {
-  @apply flex flex-col w-[240px] h-[220px] bg-[#CC0E31] bg-opacity-90 rounded-[25px] text-white font-Poppins justify-between p-3;
+  @apply flex flex-col w-[240px] h-[220px] bg-[#CC0E31] bg-opacity-90 rounded-[25px] text-white font-Poppins justify-between p-2;
 }
 .sections {
-  @apply w-full h-[55%] flex items-center justify-center overflow-hidden p-1 relative;
+  @apply w-full h-[55%] flex items-center justify-center overflow-hidden relative;
 }
 .section {
   @apply h-[50px] w-[50px] relative flex bg-white bg-opacity-30  mx-3 rounded-[10px]  overflow-hidden;
@@ -50,5 +50,14 @@
   @apply block;
 }
 .content {
-  @apply flex-1 h-full bg-yellow-500;
+  @apply flex-1 h-full p-2 flex flex-col justify-center overflow-hidden;
+}
+.bairro {
+  @apply text-[15px]  my-1
+}
+.homeAddress {
+  @apply text-[13px]
+}
+.number {
+  @apply text-[12px] text-opacity-70
 }

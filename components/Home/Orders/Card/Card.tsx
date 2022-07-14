@@ -3,7 +3,7 @@ import { IoIosMore, IoMdHome } from "react-icons/io";
 import { MdOutlineMenuBook } from "react-icons/md";
 import styles from "./Card.module.css";
 
-const Card: React.FC = () => {
+const Card: React.FC<ClientOrderCardProps> = ({ info }) => {
   const Handler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const sections = document.querySelectorAll<HTMLDivElement>(`div.${styles.section}`);
     sections.forEach((sec) => {
@@ -30,17 +30,25 @@ const Card: React.FC = () => {
           <div className={styles.case}>
             <MdOutlineMenuBook />
           </div>
+          <div className={styles.content}>
+            
+          </div>
         </div>
         <div className={`${styles.address} ${styles.section} ${styles.padron}`} onClick={Handler}>
           <div className={styles.case}>
             <IoMdHome />
           </div>
-          <div className={styles.content}></div>
+          <div className={styles.content}>
+            <h1 className={styles.bairro}>{info.location.bairro}</h1>
+            <h2 className={styles.homeAddress}>{info.location.address}</h2>
+            <span className={styles.number}>Nº{info.location.casa}</span>
+          </div>
         </div>
         <div className={`${styles.more} ${styles.section} ${styles.padron}`} onClick={Handler}>
           <div className={styles.case}>
             <IoIosMore />
           </div>
+          <div className={styles.content}></div>
         </div>
       </div>
       <div className="flex flex-col">

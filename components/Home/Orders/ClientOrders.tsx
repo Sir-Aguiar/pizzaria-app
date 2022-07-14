@@ -34,7 +34,7 @@ const ClientOrders: React.FC = () => {
           }}
         />
       </div>
-      <Card/>
+      {clientOrder && <Card info={clientOrder} />}
     </div>
   );
 };
